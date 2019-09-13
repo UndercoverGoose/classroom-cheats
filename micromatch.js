@@ -1,5 +1,9 @@
-let t = localStorage.getItem('c.js/t').split('\\a');
-let d = localStorage.getItem('c.js/d').split('\\a');
+let t=[];
+d=[];
+for(let x=0;x<Quizlet.matchModeData.terms.length;x++){
+	t.push(Quizlet.matchModeData.terms[x].word);
+	d.push(Quizlet.matchModeData.terms[x].definition);
+}
 let c = false;
 let i = 0;
 let a = [];
