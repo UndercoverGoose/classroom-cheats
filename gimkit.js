@@ -3,6 +3,10 @@ function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.
 function app(v){document.body.appendChild(v)}
 function appd(v){document.getElementsByClassName('hckcntnt')[1].appendChild(v)}
 
+let newstyle = document.createElement('style');
+newstyle.textContent='.fkLxCm {box-sizing: border-box;font-size: 17px;color: white;font-weight: bold;text-align: center;display: inline-block;user-select: none;cursor: pointer;padding: 12px 16px;background: rgb(0, 85, 255);transition: background 0.2s ease 0s;border-radius: 4px;font-family: "Product Sans", sans-serif;}';
+app(newstyle);
+
 let j=JSON[Object.keys(JSON)],qs=[],as=[];
 for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
 
