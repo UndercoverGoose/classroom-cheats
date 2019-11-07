@@ -23,6 +23,10 @@ let ab = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-t
 ab.onclick=function(){if(f[2]===0){gcn('hckcntnt',3).style.background="#33aa33";f[2]=1;bainterval=setInterval(biganswer,0);}else{gcn('hckcntnt',3).style.background="#aa3333";f[2]=0;clearInterval(bainterval);}}
 appd(ab);
 
+let ia = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Input Answer");
+ia.onclick=function(){if(f[3]===0){gcn('hckcntnt',4).style.background="#33aa33";f[3]=1;iainterval=setInterval(inputanswer,0);}else{gcn('hckcntnt',3).style.background="#aa3333";f[3]=0;clearInterval(iainterval);}}
+appd(ia);
+
 function highlight(){
   try{
     let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
@@ -34,5 +38,11 @@ function biganswer(){
   try{
     let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
     d[i].parentNode.parentNode.parentNode.style="position:fixed;left:5px";
+  }catch(err){}
+}
+function inputanswer(){
+  try{
+    let q=document.getElementsByClassName('notranslate lang-en')[0].innerHTML;
+    document.getElementsByClassName('sc-jhAzac egTZap')[0].value=as[qs.indexOf(q)];
   }catch(err){}
 }
