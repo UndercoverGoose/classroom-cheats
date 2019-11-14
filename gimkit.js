@@ -18,7 +18,7 @@ for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
 let hlinterval;
 let bainterval;
 
-let f = [0, 0, 0, 0];
+let f = [0, 0, 0, 0, 0];
 let b = cre('div',"sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
 b.onclick=function(){if(f[0]===0){gcn('hckcntnt',1).style.display="block",f[0]=1,gcn('hckcntnt',0).innerHTML="X",gcn('hckcntnt',0).style.background="#ff0000";}else{gcn('hckcntnt',1).style.display="none",f[0]=0,gcn('hckcntnt',0).innerHTML="Menu",gcn('hckcntnt',0).style.background="";}};app(b);
 
@@ -54,4 +54,15 @@ function inputanswer(){
     let q=document.getElementsByClassName('notranslate lang-en')[0].innerHTML;
     document.getElementsByClassName('sc-jhAzac egTZap')[0].value=as[qs.indexOf(q)];
   }catch(err){}
+}
+window.onkeydown=function(e){
+  if(e.key="c");
+    if(f[4]===0){
+      f[4]=1;
+      gcn("hckntnt")[0].style.display="none";
+    }else {
+      f[4]=0;
+      gcn("hckntnt")[0].style.display=null;
+    }
+  }
 }
