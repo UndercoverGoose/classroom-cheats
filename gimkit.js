@@ -56,7 +56,7 @@ function inputanswer(){
   }catch(err){}
 }
 window.onkeydown=function(e){
-  if(e.key="c");
+  if(e.key==="c"){
     if(f[4]===0){
       f[4]=1;
       gcn("hckntnt")[0].style.display="none";
