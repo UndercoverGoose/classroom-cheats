@@ -59,10 +59,10 @@ window.onkeydown=function(e){
   if(e.key==="c"){
     if(f[4]===0){
       f[4]=1;
-      gcn("hckntnt")[0].style.display="none";
+      gcn("hckcntnt")[0].style.display="none";
     }else {
       f[4]=0;
-      gcn("hckntnt")[0].style.display=null;
+      gcn("hckcntnt")[0].style.display=null;
     }
   }
 }
