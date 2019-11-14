@@ -1,3 +1,8 @@
+/*
+* Made by: ConnorCoder
+* Prove it Oskar
+*/
+
 function gcn(x,y){return document.getElementsByClassName(x)[y]}
 function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.innerHTML=i;return x;}
 function app(v){document.body.appendChild(v)}
