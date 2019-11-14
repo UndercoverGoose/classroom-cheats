@@ -59,11 +59,9 @@ window.onkeydown=function(e){
   if(e.key==="c"){
     if(f[4]===0){
       f[4]=1;
-      alert('Hidden');
       document.getElementsByClassName('hckcntnt')[0].style.display="none"
     }else {
       f[4]=0;
-      alert('Shown');
       document.getElementsByClassName('hckcntnt')[0].style.display=null;
     }
   }
