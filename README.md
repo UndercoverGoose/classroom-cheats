@@ -1,8 +1,7 @@
 # quizlet
-Quizlet Cheats
+Quizlet Cheats & More
 
-## creation.js is irrelevant
+## Updates:
 
-
-## How to use
-Put the Micromatch script into a bookmark and while in micromatch, click it to color matching terms
+### Gimkit:
+- Added the ability to hide the "Menu" button
