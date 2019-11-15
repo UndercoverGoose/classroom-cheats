@@ -6,7 +6,6 @@
 *
 * Upcoming Features: Instant Purchases
 *
-* Note: ThatFruedDued, you will be reported for copying copyrighted material without my permission.
 */
 
 // Function to simplify the creation, appending, and getting of objects/elements
