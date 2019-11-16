@@ -1,11 +1,12 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.3.2
+* Version: 1.3.3
 * Features: Highlighting,
-            Auto Input,
-            Bigger Answer Boxes,
-            Hidden Answer,
-            Keybinds
+            Auto input,
+            Bigger answer boxes,
+            Hidden answer,
+            Keybinds,
+            Themes without buying them
 *
 * Upcoming Features: Instant Purchases
 */
@@ -36,7 +37,7 @@ let hconfig = {
     hiddenanswer: 79
   },
   theme:{
-    active:"night",
+    active:"thanos",
     night:[[0,10,18],[38,50,56],[55,71,79],[69,90,100],[84,110,122]],
     thanos:[[13,0,25],[34,0,68],[51,0,102],[62,0,124],[79,23,135]],
     ocean:[[0,0,99],[40,53,147],[7,98,150],[2,119,189],[21,101,192]],
@@ -106,8 +107,9 @@ function hiddenanswer(){
 // Theme changer
 function themechanger(){
   try{
+    document.getElementsByClassName('sc-eqIVtm isXqwg')[0].style.background="rga("+hconfig.theme[hconfig.theme.active][0].join(",")+")";
     for(let x=0;x<5;x++){
-      document.getElementsByClassName('sc-Rmtcm')[x].style.background="rgba("+hconfig.theme[hconfig.theme.active][x].join(",")+",0.3)";
+      document.getElementsByClassName('sc-Rmtcm')[x].style.background="rgba("+hconfig.theme[hconfig.theme.active][x+1].join(",")+",0.3)";
     }
   }catch(err){}
 }setInterval(themechanger, 0);
