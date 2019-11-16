@@ -1,11 +1,13 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.3
-* Last Update: Thu Nov 14 2019 22:43:38 GMT-0500 (Eastern Standard Time)
-* Features: Highlighting, and displaying of answers, and making selection box bigger
+* Version: 1.3.2
+* Features: Highlighting,
+            Auto Input,
+            Bigger Answer Boxes,
+            Hidden Answer,
+            Keybinds
 *
-* Upcoming Features: Instant Purchases, Hidden Answer
-*
+* Upcoming Features: Instant Purchases
 */
 
 // Function to simplify the creation, appending, and getting of objects/elements
