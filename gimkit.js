@@ -24,7 +24,7 @@ let j=JSON[Object.keys(JSON)],qs=[],as=[];
 for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
 
 // Cheat toggles and "Menu" button creation
-let f = [0, 0, 0, 0, 0];
+let f = [0, 0, 0, 0, 0, 0];
 let b = cre('div',"sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
 b.onclick=function(){if(f[0]===0){gcn('hckcntnt',1).style.display="block",f[0]=1,gcn('hckcntnt',0).innerHTML="X",gcn('hckcntnt',0).style.background="#ff0000";}else{gcn('hckcntnt',1).style.display="none",f[0]=0,gcn('hckcntnt',0).innerHTML="Menu",gcn('hckcntnt',0).style.background="";}};app(b);
 
@@ -43,12 +43,12 @@ appd(ab);
 
 // Toggles/creates input answer cheat
 let ia = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Input Answer");
-ia.onclick=function(){if(f[3]===0){gcn('hckcntnt',4).style.background="#33aa33";f[3]=1;iainterval=setInterval(inputanswer,0);}else{gcn('hckcntnt',3).style.background="#aa3333";f[3]=0;clearInterval(iainterval);}}
+ia.onclick=function(){if(f[3]===0){gcn('hckcntnt',4).style.background="#33aa33";f[3]=1;iainterval=setInterval(inputanswer,0);}else{gcn('hckcntnt',4).style.background="#aa3333";f[3]=0;clearInterval(iainterval);}}
 appd(ia);
 
 // Toggles/creates hidden answer cheat
 let ha = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Hidden Answer");
-ha.onclick=function(){if(f[4]===0){gcn('hckcntnt',5).style.background="#33aa33";f[4]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',4).style.background="#aa3333";f[4]=0;clearInterval(hainterval);document.title="Play Gimkit! - Enter game code here";}}
+ha.onclick=function(){if(f[5]===0){gcn('hckcntnt',5).style.background="#33aa33";f[5]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',5).style.background="#aa3333";f[5]=0;clearInterval(hainterval);document.title="Play Gimkit! - Enter game code here";}}
 appd(ha);
 
 // Functions that make the cheats work
