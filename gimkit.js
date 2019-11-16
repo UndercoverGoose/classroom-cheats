@@ -34,6 +34,16 @@ let hconfig = {
     biganswer: 66,
     inputanswer: 73,
     hiddenanswer: 79
+  },
+  theme:{
+    active:"night",
+    night:[[0,10,18],[38,50,56],[55,71,79],[69,90,100],[84,110,122]],
+    thanos:[[13,0,25],[34,0,68],[51,0,102],[62,0,124],[79,23,135]],
+    ocean:[[0,0,99],[40,53,147],[7,98,150],[2,119,189],[21,101,192]],
+    forest:[[76,61,51],[56,86,69],[66,92,73],[65,86,65],[76,99,73]],
+    sunset:[[127,116,150],[224,111,90],[237,113,45],[122,89,106],[232,171,60]],
+    retro:[[156,0,34],[0,29,59],[255,174,82],[254,89,99],[167,28,148]],
+    gold:[[],[],[],[],[]]
   }
 }
 let b = cre('div',"sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
@@ -92,6 +102,15 @@ function hiddenanswer(){
     document.title=i + "lay Gimkit! - Enter game code here";
   }catch(err){}
 }
+
+// Theme changer
+function themechanger(){
+  try{
+    for(let x=0;x<5;x++){
+      document.getElementsByClassName('sc-Rmtcm')[x].style.background="rgba("+hconfig.theme[hconfig.theme.active][x].join(",")+",0.3)";
+    }
+  }catch(err){}
+}setInterval(themechanger, 0);
 
 // Key events for added features
 window.onkeydown=function(e){
