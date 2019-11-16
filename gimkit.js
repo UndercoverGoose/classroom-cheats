@@ -48,7 +48,7 @@ appd(ia);
 
 // Toggles/creates hidden answer cheat
 let ha = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Hidden Answer");
-ha.onclick=function(){if(f[4]===0){gcn('hckcntnt',5).style.background="#33aa33";f[4]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',4).style.background="#aa3333";f[4]=0;clearInterval(hainterval);}}
+ha.onclick=function(){if(f[4]===0){gcn('hckcntnt',5).style.background="#33aa33";f[4]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',4).style.background="#aa3333";f[4]=0;clearInterval(hainterval);document.title="Play Gimkit! - Enter game code here";}}
 appd(ha);
 
 // Functions that make the cheats work
@@ -72,8 +72,10 @@ function inputanswer(){
   }catch(err){}
 }
 function hiddenanswer(){
-  let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
-  document.title=i;
+  try {
+    let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+    document.title=i + "lay Gimkit! - Enter game code here";
+  }catch(err){}
 }
 
 // Key events for added features
