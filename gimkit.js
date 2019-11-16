@@ -1,11 +1,10 @@
 /*
 * Made by: UndercoverGoose
-* Lines: 92
 * Version: 1.3
 * Last Update: Thu Nov 14 2019 22:43:38 GMT-0500 (Eastern Standard Time)
 * Features: Highlighting, and displaying of answers, and making selection box bigger
 *
-* Upcoming Features: Instant Purchases
+* Upcoming Features: Instant Purchases, Hidden Answer
 *
 */
 
@@ -23,9 +22,6 @@ app(newstyle);
 // Gets answers/questions
 let j=JSON[Object.keys(JSON)],qs=[],as=[];
 for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
-
-let hlinterval;
-let bainterval;
 
 // Cheat toggles and "Menu" button creation
 let f = [0, 0, 0, 0, 0];
@@ -50,6 +46,11 @@ let ia = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-t
 ia.onclick=function(){if(f[3]===0){gcn('hckcntnt',4).style.background="#33aa33";f[3]=1;iainterval=setInterval(inputanswer,0);}else{gcn('hckcntnt',3).style.background="#aa3333";f[3]=0;clearInterval(iainterval);}}
 appd(ia);
 
+// Toggles/creates hidden answer cheat
+let ha = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Hidden Answer");
+ha.onclick=function(){if(f[4]===0){gcn('hckcntnt',5).style.background="#33aa33";f[4]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',4).style.background="#aa3333";f[4]=0;clearInterval(hainterval);}}
+appd(ha);
+
 // Functions that make the cheats work
 function highlight(){
   try{
@@ -69,6 +70,10 @@ function inputanswer(){
     let q=document.getElementsByClassName('notranslate lang-en')[0].innerHTML;
     document.getElementsByClassName('sc-jhAzac egTZap')[0].value=as[qs.indexOf(q)];
   }catch(err){}
+}
+function hiddenanswer(){
+  let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+  document.title=i;
 }
 
 // Key events for added features
