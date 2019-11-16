@@ -25,6 +25,15 @@ for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
 
 // Cheat toggles and "Menu" button creation
 let f = [0, 0, 0, 0, 0, 0];
+let hconfig = {
+  keybinds:{
+    hidemenu: 67,
+    highlight: 72,
+    biganswer: 66,
+    inputanswer: 73,
+    hiddenanswer: 79
+  }
+}
 let b = cre('div',"sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
 b.onclick=function(){if(f[0]===0){gcn('hckcntnt',1).style.display="block",f[0]=1,gcn('hckcntnt',0).innerHTML="X",gcn('hckcntnt',0).style.background="#ff0000";}else{gcn('hckcntnt',1).style.display="none",f[0]=0,gcn('hckcntnt',0).innerHTML="Menu",gcn('hckcntnt',0).style.background="";}};app(b);
 
@@ -80,7 +89,7 @@ function hiddenanswer(){
 
 // Key events for added features
 window.onkeydown=function(e){
-  if(e.key==="c"){
+  if(e.keyCode===hconfig.keybinds.hidemenu){
     if(f[4]===0){
       f[4]=1;
       document.getElementsByClassName('hckcntnt')[0].style.display="none"
@@ -88,11 +97,13 @@ window.onkeydown=function(e){
       f[4]=0;
       document.getElementsByClassName('hckcntnt')[0].style.display=null;
     }
-  }else if(e.key==="h"){
+  }else if(e.keyCode===hconfig.keybinds.highlight){
     highlight();
-  }else if(e.key==="b"){
+  }else if(e.keyCode===hconfig.keybinds.biganswer){
     biganswer();
-  }else if(e.key==="i"){
+  }else if(e.keyCode===hconfig.keybinds.inputanswer){
     inputanswer();
+  }else if(e.keyCode===hconfig.keybings.hiddenanswer){
+    hiddenanswer();
   }
 }
