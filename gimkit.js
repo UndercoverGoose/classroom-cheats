@@ -60,6 +60,10 @@ let ha = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-t
 ha.onclick=function(){if(f[5]===0){gcn('hckcntnt',5).style.background="#33aa33";f[5]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',5).style.background="#aa3333";f[5]=0;clearInterval(hainterval);document.title="Play Gimkit! - Enter game code here";}}
 appd(ha);
 
+// Creates settings button
+let se = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333;position:absolute;bottom:1px;right:1px","Settings");
+appd(se);
+
 // Functions that make the cheats work
 function highlight(){
   try{
