@@ -61,7 +61,7 @@ ha.onclick=function(){if(f[5]===0){gcn('hckcntnt',5).style.background="#33aa33";
 appd(ha);
 
 // Creates settings button
-let se = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:1700px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
+let se = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:170px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
 appd(se);
 
 // Functions that make the cheats work
