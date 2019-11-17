@@ -87,6 +87,8 @@ let setxt = document.createElement('span');
 setxt.appendChild(document.createTextNode('Themes'));
 apps(setxt);
 
+apps(document.createElement('br'));
+
 // Theme Buttons
 let t_default = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Default");
 t_default.onclick=function(){hconfig.theme.active="default"};
