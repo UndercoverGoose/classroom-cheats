@@ -75,7 +75,7 @@ appd(ha);
 
 // Creates settings button
 let se = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:170px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
-se.onclick=function(){if(f[6]===0){gcn('hckcntnt',6).style.display="block";f[6]=1;}else{f[6]=0;gcn('hckcntnt',6).style.display=null;}}
+se.onclick=function(){if(f[6]===0){gcn('hckcntnt',7).style.display="block";f[6]=1;}else{f[6]=0;gcn('hckcntnt',7).style.display=null;}}
 appd(se);
 
 // Creates setttings placeholder
