@@ -75,8 +75,12 @@ appd(ha);
 
 // Creates settings button
 let se = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:170px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
+se.onclick=function(){if(f[6]===0){gcn('hckcntnt',6).style.display="block";f[6]=1;}else{f[6]=0;gcn('hckcntnt',6).style.display=null;}}
 appd(se);
 
+// Creates setttings placeholder
+let sep = cre("div","sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: hidden;","");
+app(sep);
 // Functions that make the cheats work
 function highlight(){
   try{
@@ -108,6 +112,7 @@ function hiddenanswer(){
 function themechanger(){
   try{
     document.getElementsByClassName('sc-bwzfXH')[0].style.background="rgb("+hconfig.theme[hconfig.theme.active][0].join(",")+")";
+    document.getElementsByClassName('hckcntnt')[1].style.background="rgb("+hconfig.theme[hconfig.theme.active][0].join(",")+")";
     for(let x=0;x<5;x++){
       document.getElementsByClassName('sc-Rmtcm')[x].style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
     }
