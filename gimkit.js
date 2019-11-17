@@ -87,6 +87,25 @@ let setxt = document.createElement('span');
 setxt.appendChild(document.createTextNode('Themes'));
 apps(setxt);
 
+// Theme Buttons
+let t_default = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Default");
+t_default.onclick=function(){hconfig.theme.active="default"};
+let t_night = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Night");
+t_night.onclick=function(){hconfig.theme.active="night"};
+let t_thanos = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Thanos");
+t_thanos.onclick=function(){hconfig.theme.active="thanos"};
+let t_ocean = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Ocean");
+t_ocean.onclick=function(){hconfig.theme.active="ocean"};
+let t_forest = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Forest");
+t_forest.onclick=function(){hconfig.theme.active="forest"};
+let t_sunset = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Sunset");
+t_sunset.onclick=function(){hconfig.theme.active="sunset"};
+let t_retro = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Retro");
+t_retro.onclick=function(){hconfig.theme.active="retro"};
+let t_gold = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#333333","Gold (WIP)");
+t_gold.onclick=function(){hconfig.theme.active="gold"};
+apps(t_default),apps(t_night),apps(t_thanos),apps(t_ocean),apps(t_forest),apps(t_sunset),apps(t_retro),apps(t_gold);
+
 // Functions that make the cheats work
 function highlight(){
   try{
