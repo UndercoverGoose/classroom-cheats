@@ -164,7 +164,7 @@ window.onkeydown=function(e){
     biganswer();
   }else if(e.keyCode===hconfig.keybinds.inputanswer){
     inputanswer();
-  }else if(e.keyCode===hconfig.keybings.hiddenanswer){
+  }else if(e.keyCode===hconfig.keybinds.hiddenanswer){
     hiddenanswer();
   }
 }
