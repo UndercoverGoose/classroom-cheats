@@ -83,7 +83,8 @@ appd(se);
 let sep = cre("div","sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
 app(sep);
 
-let setxt = cre("span","","Theme");
+let setxt = document.createElemend('span');
+setxt.appendChild(document.createTextNode('Themes'));
 apps(setxt);
 
 // Functions that make the cheats work
