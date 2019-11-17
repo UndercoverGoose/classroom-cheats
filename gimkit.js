@@ -83,7 +83,8 @@ appd(se);
 let sep = cre("div","sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
 app(sep);
 
-apps(document.createElement('span').textContent="Theme");
+let setxt = cre("span","","Theme");
+apps(setxt);
 
 // Functions that make the cheats work
 function highlight(){
