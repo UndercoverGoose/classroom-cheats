@@ -38,14 +38,15 @@ let hconfig = {
     hiddenanswer: 79
   },
   theme:{
-    active:"thanos",
+    active:"default",
+    default:[[48,63,159],[119,19,34],[168,92,21],[13,107,51],[7,98,150]],
     night:[[0,10,18],[38,50,56],[55,71,79],[69,90,100],[84,110,122]],
     thanos:[[13,0,25],[34,0,68],[51,0,102],[62,0,124],[79,23,135]],
     ocean:[[0,0,99],[40,53,147],[7,98,150],[2,119,189],[21,101,192]],
     forest:[[76,61,51],[56,86,69],[66,92,73],[65,86,65],[76,99,73]],
     sunset:[[127,116,150],[224,111,90],[237,113,45],[122,89,106],[232,171,60]],
     retro:[[156,0,34],[0,29,59],[255,174,82],[254,89,99],[167,28,148]],
-    gold:[[],[],[],[],[]]
+    gold:[[48,63,159],[255,205,43],[255,199,33],[255,209,71],[255,205,56]]
   }
 }
 let b = cre('div',"sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
@@ -90,21 +91,21 @@ apps(setxt);
 apps(document.createElement('br'));
 
 // Theme Buttons
-let t_default = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Default");
+let t_default = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.default[3].join(",")+")","Default");
 t_default.onclick=function(){hconfig.theme.active="default"};
-let t_night = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Night");
+let t_night = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.night[3].join(",")+")","Night");
 t_night.onclick=function(){hconfig.theme.active="night"};
-let t_thanos = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Thanos");
+let t_thanos = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.thanos[3].join(",")+")","Thanos");
 t_thanos.onclick=function(){hconfig.theme.active="thanos"};
-let t_ocean = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Ocean");
+let t_ocean = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.ocean[3].join(",")+")","Ocean");
 t_ocean.onclick=function(){hconfig.theme.active="ocean"};
-let t_forest = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Forest");
+let t_forest = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.forest[3].join(",")+")","Forest");
 t_forest.onclick=function(){hconfig.theme.active="forest"};
-let t_sunset = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Sunset");
+let t_sunset = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.sunset[3].join(",")+")","Sunset");
 t_sunset.onclick=function(){hconfig.theme.active="sunset"};
-let t_retro = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#aa3333","Retro");
+let t_retro = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.retro[3].join(",")+")","Retro");
 t_retro.onclick=function(){hconfig.theme.active="retro"};
-let t_gold = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:#333333","Gold (WIP)");
+let t_gold = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.gold[3].join(",")+")","Gold (WIP)");
 t_gold.onclick=function(){hconfig.theme.active="gold"};
 apps(t_default),apps(t_night),apps(t_thanos),apps(t_ocean),apps(t_forest),apps(t_sunset),apps(t_retro),apps(t_gold);
 
