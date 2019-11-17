@@ -107,7 +107,7 @@ function hiddenanswer(){
 // Theme changer
 function themechanger(){
   try{
-    document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].style.background="rga("+hconfig.theme[hconfig.theme.active][0].join(",")+")";
+    document.getElementsByClassName('sc-bwzfXH')[0].style.background="rgb("+hconfig.theme[hconfig.theme.active][0].join(",")+")";
     for(let x=0;x<5;x++){
       document.getElementsByClassName('sc-Rmtcm')[x].style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
     }
