@@ -1,6 +1,6 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.3.3
+* Version: 1.4
 * Features: Highlighting,
             Auto input,
             Bigger answer boxes,
@@ -31,11 +31,11 @@ for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
 let f = [0, 0, 0, 0, 0, 0];
 let hconfig = {
   keybinds:{
-    hidemenu: 67,
-    highlight: 72,
-    biganswer: 66,
-    inputanswer: 73,
-    hiddenanswer: 79
+    hidemenu: 67, // c
+    highlight: 72, // h
+    biganswer: 66, // b
+    inputanswer: 73, // i
+    hiddenanswer: 79 // o
   },
   theme:{
     active:"default",
@@ -49,39 +49,44 @@ let hconfig = {
     gold:[[255,190,25],[255,205,43],[255,199,33],[255,209,71],[255,205,56]]
   }
 }
-let b = cre('div',"sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
+let btnattr={
+  style:"width:200px;height:40px;margin-top:3px;background:#aa3333",
+  class:"sc-bdVaJa fkLxCm hckcntnt"
+}
+
+let b = cre('div',btnattr.class,"position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
 b.onclick=function(){if(f[0]===0){gcn('hckcntnt',1).style.display="block",f[0]=1,gcn('hckcntnt',0).innerHTML="X",gcn('hckcntnt',0).style.background="#ff0000";}else{gcn('hckcntnt',1).style.display="none",f[0]=0,gcn('hckcntnt',0).innerHTML="Menu",gcn('hckcntnt',0).style.background="";}};app(b);
 
 // Area for cheat buttons
-app(cre("div","sc-bdVaJa fkLxCm hckcntnt","position:fixed;z-index:10000;left:5px;bottom:5px;width:300px;height:600px;display:none",""));
+app(cre("div",btnattr.class,"position:fixed;z-index:10000;left:5px;bottom:5px;width:300px;height:600px;display:none",""));
 
 // Toggles/creates highlight answers cheat
-let h = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;background:#aa3333","Highlight Answers");
+let h = cre("div",btnattr.class,btnattr.style,"Highlight Answers");
 h.onclick=function(){if(f[1]===0){gcn('hckcntnt',2).style.background="#33aa33";f[1]=1;hlinterval=setInterval(highlight,0);}else{gcn('hckcntnt',2).style.background="#aa3333";f[1]=0;clearInterval(hlinterval);}}
 appd(h);
 
 // Toggles/creates big answer cheat
-let ab = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Big Answer Box");
+let ab = cre("div",btnattr.class,btnattr.style,"Big Answer Box");
 ab.onclick=function(){if(f[2]===0){gcn('hckcntnt',3).style.background="#33aa33";f[2]=1;bainterval=setInterval(biganswer,0);}else{gcn('hckcntnt',3).style.background="#aa3333";f[2]=0;clearInterval(bainterval);}}
 appd(ab);
 
 // Toggles/creates input answer cheat
-let ia = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Input Answer");
+let ia = cre("div",btnattr.class,btnattr.style,"Input Answer");
 ia.onclick=function(){if(f[3]===0){gcn('hckcntnt',4).style.background="#33aa33";f[3]=1;iainterval=setInterval(inputanswer,0);}else{gcn('hckcntnt',4).style.background="#aa3333";f[3]=0;clearInterval(iainterval);}}
 appd(ia);
 
 // Toggles/creates hidden answer cheat
-let ha = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:200px;height:40px;margin-top:3px;background:#aa3333","Hidden Answer");
+let ha = cre("div",btnattr.class,btnattr.style,"Hidden Answer");
 ha.onclick=function(){if(f[5]===0){gcn('hckcntnt',5).style.background="#33aa33";f[5]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',5).style.background="#aa3333";f[5]=0;clearInterval(hainterval);document.title="Play Gimkit! - Enter game code here";}}
 appd(ha);
 
 // Creates settings button
-let se = cre("div","sc-bdVaJa fkLxCm hckcntnt","width:170px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
+let se = cre("div",btnattr.class,"width:170px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
 se.onclick=function(){if(f[6]===0){gcn('hckcntnt',7).style.display="block";f[6]=1;}else{f[6]=0;gcn('hckcntnt',7).style.display="none";}}
 appd(se);
 
 // Creates setttings placeholder
-let sep = cre("div","sc-bdVaJa fkLxCm hckcntnt","position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
+let sep = cre("div",btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
 app(sep);
 
 let setxt = document.createElement('span');
@@ -91,23 +96,12 @@ apps(setxt);
 apps(document.createElement('br'));
 
 // Theme Buttons
-let t_default = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.default[3].join(",")+")","Default");
-t_default.onclick=function(){hconfig.theme.active="default"};
-let t_night = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.night[3].join(",")+")","Night");
-t_night.onclick=function(){hconfig.theme.active="night"};
-let t_thanos = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.thanos[3].join(",")+")","Thanos");
-t_thanos.onclick=function(){hconfig.theme.active="thanos"};
-let t_ocean = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.ocean[3].join(",")+")","Ocean");
-t_ocean.onclick=function(){hconfig.theme.active="ocean"};
-let t_forest = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.forest[3].join(",")+")","Forest");
-t_forest.onclick=function(){hconfig.theme.active="forest"};
-let t_sunset = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.sunset[3].join(",")+")","Sunset");
-t_sunset.onclick=function(){hconfig.theme.active="sunset"};
-let t_retro = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.retro[3].join(",")+")","Retro");
-t_retro.onclick=function(){hconfig.theme.active="retro"};
-let t_gold = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+hconfig.theme.gold[3].join(",")+")","Gold (WIP)");
-t_gold.onclick=function(){hconfig.theme.active="gold"};
-apps(t_default),apps(t_night),apps(t_thanos),apps(t_ocean),apps(t_forest),apps(t_sunset),apps(t_retro),apps(t_gold);
+for(let x=0;x<8;x++){
+  let y=hconfig.theme;
+  let t = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+y[Object.keys(y)[x+1]][3].join(",")+")",Object.keys(y)[x+1]);
+  t.onclick=function(){y.active=Object.keys(y)[x+1]};
+  apps(t);
+}
 
 // Functions that make the cheats work
 function highlight(){
