@@ -1,15 +1,6 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.4
-* Features: Highlighting,
-            Auto input,
-            Bigger answer boxes,
-            Hidden answer,
-            Keybinds,
-            Themes without buying them
-            Session Stealing
-*
-* Upcoming Features: Instant Purchases
+* Version: 1.5
 */
 
 // Function to simplify the creation, appending, and getting of objects/elements
