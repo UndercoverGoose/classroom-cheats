@@ -19,3 +19,7 @@
 ### Bookmarklet (AUTO-UPDATING)
 - Copy & Paste the script below into a bookmark:
 `javascript:let lscrpt=document.createElement("script");lscrpt.src="https://undercovergoose.github.io/quizlet/gimkit/gimkit.js";document.body.appendChild(lscrpt);void 0`
+
+## Upcoming Features:
+#### Instant Purchasing
+- Allows you to purchase the next upgrade without having to navigate to the shop
