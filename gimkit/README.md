@@ -41,6 +41,7 @@ If for any reason, someone you are working with in your Gimkit gets disconnected
 - Copy & Paste [gimkit.js](gimkit.js) **or** Bookmarklet *(Below)* and remove `javascript:` & `void 0`
 #### Bookmarklet (AUTO-UPDATING)
 - Copy & Paste the script below into a bookmark:
+
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovergoose.github.io/quizlet/gimkit/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
 ## Upcoming Features:
