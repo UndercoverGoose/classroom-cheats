@@ -98,11 +98,11 @@ document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
 let automulti = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:-200px","Multi: Level 1 for $0");
 document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
 
-let autoprotec = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+"position:absolute;margin-left:-400px","Protec: Level 1 for $0");
+let autoprotec = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:-400px","Protec: Level 1 for $0");
 document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
 
 function autowhatever(){
-  let bal = document.getElementsByTagName('div')[9].innerHTML.split(",").join("").split("$".join(""));
+  let bal = document.getElementsByTagName('div')[9].innerHTML.split(",").join("").split("$").join(""));
   
   for(let x=0;x<hconfig.upgrades.money.length;x++){
     if(bal > hconfig.upgrades.money[x]) {
