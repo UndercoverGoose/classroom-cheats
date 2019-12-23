@@ -159,7 +159,7 @@ function themechanger(){
       if(hconfig.theme.active === "gold") {
         gcn('sc-Rmtcm',x).style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
         if(x === 0) {
-          gcn('sc-Rmtcm',x).style.color="rgb(255, 205, 43)";
+          gcn('sc-Rmtcm',0).style.color="rgb(255, 205, 43)";
         }else {
           gcn('sc-Rmtcm',x).style.color="black";
         }
