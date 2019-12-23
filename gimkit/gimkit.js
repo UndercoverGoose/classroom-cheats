@@ -102,7 +102,7 @@ let autoprotec = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:ab
 document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
 
 function autowhatever(){
-  let bal = document.getElementsByTagName('div')[9].innerHTML.split(",").join("").split("$").join(""));
+  let bal = document.getElementsByTagName('div')[9].innerHTML.split(",").join("").split("$").join("");
   
   for(let x=0;x<hconfig.upgrades.money.length;x++){
     if(bal > hconfig.upgrades.money[x]) {
