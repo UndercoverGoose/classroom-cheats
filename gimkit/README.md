@@ -35,6 +35,11 @@ If a teacher, or someone who you don't want to get caught cheating with comes ov
 > **NOTE:** You'll need the users Blueboat ID, and nobody can be connected to the ID
 ##### Why?
 If for any reason, someone you are working with in your Gimkit gets disconnected, you can take their session to make sure they don't lose any progress while reconnecting
+#### Upgrade Update
+- Shows you the highest upgrade you can do for all 4 categories
+> **NOTE** Does not tell you *if* you can do the upgrade
+##### Why?
+So you can visit the shop knowing what you are going to upgrade
 
 ## Usage:
 #### Developer Console
