@@ -18,7 +18,7 @@ So people who are suspicious will now think you are legit
 If a teacher, or someone who you don't want to get caught cheating with comes over, and can simply press C or another keybine to hide what you have open
 #### Applying Themes Without Buying Them
 - Show off.
-(Night Theme)[github/images/night.png]
+[Night Theme](github/images/night.png)
 #### Session Stealer
 - Allows you to steal the session of any other player in the Gimkit match
 > **NOTE:** You'll need the users Blueboat ID, and nobody can be connected to the ID
