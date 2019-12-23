@@ -121,7 +121,7 @@
     }
     for(let x=0;x<hc.streak.length;x++){
       if(bal > hc.streak[x]) {
-        v[1].innerHTML = "Streak: Level " + (x + 1) + " for $" + hc.streak[x];
+        shrink[1].innerHTML = "Streak: Level " + (x + 1) + " for $" + hc.streak[x];
       }
     }
     for(let x=0;x<hc.multi.length;x++){
