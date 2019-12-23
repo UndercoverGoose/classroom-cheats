@@ -38,7 +38,7 @@ let hconfig = {
     forest:[[76,61,51],[56,86,69],[66,92,73],[65,86,65],[76,99,73]],
     sunset:[[127,116,150],[224,111,90],[237,113,45],[122,89,106],[232,171,60]],
     retro:[[156,0,34],[0,29,59],[255,174,82],[254,89,99],[167,28,148]],
-    gold:[[255,190,25],[255,205,43],[255,199,33],[255,209,71],[255,205,56]]
+    gold:[[0,0,0],[255,205,43],[255,199,33],[255,209,71],[255,205,56]]
   }
 }
 let btnattr={
@@ -156,7 +156,17 @@ function themechanger(){
     gcn('hckcntnt',1).style.background="rgb("+hconfig.theme[hconfig.theme.active][4].join(",")+")";
     gcn('hckcntnt',7).style.background="rgb("+hconfig.theme[hconfig.theme.active][2].join(",")+")";
     for(let x=0;x<5;x++){
-      gcn('sc-Rmtcm',x).style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
+      if(hconfig.theme.active === "gold") {
+        gcn('sc-Rmtcm',x).style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
+        if(x === 0) {
+          gcn('sc-Rmtcm',x).style.color="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
+        }else {
+          gcn('sc-Rmtcm',x).style.color="black";
+        }
+      }else {
+        gcn('sc-Rmtcm',x).style.background="rgb("+hconfig.theme[hconfig.theme.active][x+1].join(",")+")";
+        gcn('sc-Rmtcm',x).style.color="white";
+      }
     }
   }catch(err){}
 }setInterval(themechanger, 0);
