@@ -19,8 +19,9 @@ If a teacher, or someone who you don't want to get caught cheating with comes ov
 #### Applying Themes Without Buying Them
 - Show off.
 <p align="center">
-  <img src="../github/images/night.png" width="350" title="Night Theme" alt="Night Theme" width="500px">
+  <img src="../github/images/night.png" width="350" title="Night Theme" alt="Night Theme" width="500px"/>
 </p>
+
 #### Session Stealer
 - Allows you to steal the session of any other player in the Gimkit match
 > **NOTE:** You'll need the users Blueboat ID, and nobody can be connected to the ID
