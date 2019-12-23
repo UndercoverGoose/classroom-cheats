@@ -18,7 +18,13 @@ So people who are suspicious will now think you are legit
 If a teacher, or someone who you don't want to get caught cheating with comes over, and can simply press C or another keybine to hide what you have open
 #### Applying Themes Without Buying Them
 - Show off.
-<img src="../github/images/night.png" width="350" title="Night Theme" alt="Night Theme" width="500px"/>
+<img src="../github/images/night.png" title="Night Theme" alt="Night Theme" width="500px"/>
+<img src="../github/images/thanos.png" title="[LIMITED] Thanos Theme" alt="[LIMITED] Thanos Theme" width="500px"/>
+<img src="../github/images/forest.png" title="Forest Theme" alt="Forest Theme" width="500px"/>
+<img src="../github/images/sunset.png" title="Sunset Theme" alt="Sunset Theme" width="500px"/>
+<img src="../github/images/retro.png" title="Retro Theme" alt="Retro Theme" width="500px"/>
+<img src="../github/images/ocean.png" title="Ocean Theme" alt="Ocean Theme" width="500px"/>
+<img src="../github/images/gold.png" title="Gold Theme" alt="Gold Theme" width="500px"/>
 
 #### Session Stealer
 - Allows you to steal the session of any other player in the Gimkit match
