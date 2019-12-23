@@ -90,16 +90,16 @@ appd(ssb);
 
 // Creates Upgradeable Upgrade Display
 let automoney = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:200px;","Money: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney);
 
 let autostreak = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style,"Streak: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(autostreak);
 
 let automulti = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:-200px","Multi: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automulti);
 
 let autoprotec = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:-400px","Protec: Level 1 for $0");
-document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(autoprotec);
 
 function autowhatever(){
   let bal = document.getElementsByTagName('div')[9].innerHTML.split(",").join("").split("$").join("");
