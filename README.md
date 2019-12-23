@@ -2,4 +2,4 @@
 
 # [Gimkit Cheats](gimkit/README.md)
 
-</test>
+</gimkit cheat>
