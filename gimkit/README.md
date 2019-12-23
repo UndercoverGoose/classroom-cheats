@@ -28,7 +28,7 @@ If a teacher, or someone who you don't want to get caught cheating with comes ov
 #### Applying Themes Without Buying Them
 - Show off.
 
-<img src="../github/images/night.png" title="Night Theme" alt="Night Theme" width="250px"/><img src="../github/images/thanos.png" title="[LIMITED] Thanos Theme" alt="[LIMITED] Thanos Theme" width="250px"/><img src="../github/images/forest.png" title="Forest Theme" alt="Forest Theme" width="250px"/><img src="../github/images/sunset.png" title="Sunset Theme" alt="Sunset Theme" width="250px"/><img src="../github/images/retro.png" title="Retro Theme" alt="Retro Theme" width="250px"/><img src="../github/images/ocean.png" title="Ocean Theme" alt="Ocean Theme" width="250px"/><img src="../github/images/gold.png" title="Gold Theme" alt="Gold Theme" width="250px"/>
+<img src="../github/images/night.png" title="Night Theme" alt="Night Theme" width="250px"/><img src="../github/images/thanos.png" title="[LIMITED] Thanos Theme" alt="[LIMITED] Thanos Theme" width="250px"/><img src="../github/images/forest.png" title="Forest Theme" alt="Forest Theme" width="250px"/><img src="../github/images/sunset.png" title="Sunset Theme" alt="Sunset Theme" width="250px"/><img src="../github/images/retro.png" title="Retro Theme" alt="Retro Theme" width="250px"/><img src="../github/images/ocean.png" title="Ocean Theme" alt="Ocean Theme" width="250px"/><img src="../github/images/goldw.png" title="Gold Theme" alt="Gold Theme" width="250px"/>
 
 #### Session Stealer
 - Allows you to steal the session of any other player in the Gimkit match
