@@ -39,6 +39,12 @@ let hconfig = {
     sunset:[[127,116,150],[224,111,90],[237,113,45],[122,89,106],[232,171,60]],
     retro:[[156,0,34],[0,29,59],[255,174,82],[254,89,99],[167,28,148]],
     gold:[[0,0,0],[255,205,43],[255,199,33],[255,209,71],[255,205,56]]
+  },
+  upgrades:{
+    money:[0,10,100,1000,10000,75000,300000,1000000,10000000,100000000],
+    streak:[0,15,150,1500,15000,115000,450000,1500000,15000000,200000000],
+    multi:[0,50,300,2000,12000,85000,700000,6500000,65000000,1000000000],
+    protec:[0,10,250,1000,25000,100000,1000000,5000000,25000000,500000000]
   }
 }
 let btnattr={
@@ -81,6 +87,44 @@ appd(se);
 let ssb = cre("div","sc-bdVaJa fkLxCm",btnattr.style,"Session Stealer");
 ssb.onclick=function(){stealSession()};
 appd(ssb);
+
+// Creates Upgradeable Upgrade Display
+let automoney = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:200px;","Money: Level 1 for $0");
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+
+let autostreak = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style,"Streak: Level 1 for $0");
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+
+let automulti = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+";position:absolute;margin-left:-200px","Multi: Level 1 for $0");
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+
+let autoprotec = cre("div","sc-bdVaJa fkLxCm autoUp",btnattr.style+"position:absolute;margin-left:-400px","Protec: Level 1 for $0");
+document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(automoney)
+
+function autowhatever(){
+  let bal = document.getElementsByTagName('div')[9].innerHTML.split(",").join("").split("$".join(""));
+  
+  for(let x=0;x<hconfig.upgrades.money.length;x++){
+    if(bal > hconfig.upgrades.money[x]) {
+      document.getElementsByClassName("autoUp")[0].innerHTML = "Money: Level " + (x + 1) + " for $" + hconfig.upgrades.money[x];
+    }
+  }
+  for(let x=0;x<hconfig.upgrades.streak.length;x++){
+    if(bal > hconfig.upgrades.streak[x]) {
+      document.getElementsByClassName("autoUp")[1].innerHTML = "Streak: Level " + (x + 1) + " for $" + hconfig.upgrades.streak[x];
+    }
+  }
+  for(let x=0;x<hconfig.upgrades.multi.length;x++){
+    if(bal > hconfig.upgrades.multi[x]) {
+      document.getElementsByClassName("autoUp")[2].innerHTML = "Multi: Level " + (x + 1) + " for $" + hconfig.upgrades.multi[x];
+    }
+  }
+  for(let x=0;x<hconfig.upgrades.protec.length;x++){
+    if(bal > hconfig.upgrades.protec[x]) {
+      document.getElementsByClassName("autoUp")[3].innerHTML = "Protec: Level " + (x + 1) + " for $" + hconfig.upgrades.protec[x];
+    }
+  }
+}setInterval(autowhatever, 2000);
 
 // Creates setttings placeholder
 let sep = cre("div",btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
