@@ -11,18 +11,18 @@
 #### Hidden Answer
 - Hides the correct answer in a number, in the title of the current tab
 ##### Why?
-- So people who are suspicious will now think you are legit
+So people who are suspicious will now think you are legit
 #### Keybinds
 - Keys: Hide Menu > C, Highlight > H, Big Answer > B, Input Answer > I, Hidden Answer > O
 ##### Why?
-- If a teacher, or someone who you don't want to get caught cheating with comes over, and can simply press C or another keybine to hide what you have open
+If a teacher, or someone who you don't want to get caught cheating with comes over, and can simply press C or another keybine to hide what you have open
 #### Applying Themes Without Buying Them
 - Show off.
 #### Session Stealer
 - Allows you to steal the session of any other player in the Gimkit match
 > **NOTE:** You'll need the users Blueboat ID, and nobody can be connected to the ID
 ##### Why?
-- If for any reason, someone you are working with in your Gimkit gets disconnected, you can take their session to make sure they don't lose any progress while reconnecting
+If for any reason, someone you are working with in your Gimkit gets disconnected, you can take their session to make sure they don't lose any progress while reconnecting
 
 ## Usage:
 #### Developer Console
