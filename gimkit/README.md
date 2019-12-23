@@ -3,13 +3,22 @@
 ## Features:
 #### Highlight Answer
 - Highlights the correct answer in a nice bold white color
+
+<img src="../github/images/highlight.png" title="Highlight Answer" alt="Highlight Answer" width="500px"/>
+
 #### Input Answers
 - Simply inputs the correct answer into those type questions that are annoying
 > **NOTE:** Requires an update to the box (space, then enter)
 #### Bigger Answer
 - Makes the selection box of the correct answer the entire screen
+
+<img src="../github/images/biganswer.png" title="Big Answer" alt="Big Answer" width="500px"/>
+
 #### Hidden Answer
 - Hides the correct answer in a number, in the title of the current tab
+
+<img src="../github/images/hidden.png" title="Hidden Answer" alt="Hidden Answer" width="500px"/>
+
 ##### Why?
 So people who are suspicious will now think you are legit
 #### Keybinds
