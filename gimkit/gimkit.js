@@ -114,28 +114,82 @@
     let bal = document.getElementsByTagName(d)[9].innerHTML.split(",").join("").split("$").join("");
     let shrink = document.getElementsByClassName('autoUp');
     let hc = hconfig.upgrades;
+    let lvl = {
+      money: 0,
+      streak: 0,
+      multi: 0,
+      protec: 0
+    }
 
-    for(let x=0;x<hc.money.length;x++){
-      if(bal > hc.money[x]) {
-        shrink[0].innerHTML = "Money: Level " + (x + 1) + " for $" + hc.money[x];
+    if(typeof document.getElementsByClassName('sc-bwzfXH gbnVhw')[0] !== "undefined"){
+      if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Money Per Question"){
+        for(let x=0;x<10;x++){
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].indexOf('gray') > -1) {
+            lvl.money = x + 1;
+          }
+        }
+      }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Streak Bonus") {
+        for(let x=0;x<10;x++){
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].indexOf('gray') > -1) {
+            lvl.streak = x + 1;
+          }
+        }
+      }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Multiplier") {
+        for(let x=0;x<10;x++){
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].indexOf('gray') > -1) {
+            lvl.multi = x + 1;
+          }
+        }
+      }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Amount Covered") {
+        for(let x=0;x<10;x++){
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].indexOf('gray') > -1) {
+            lvl.protec = x + 1;
+          }
+        }
       }
     }
-    for(let x=0;x<hc.streak.length;x++){
-      if(bal > hc.streak[x]) {
-        shrink[1].innerHTML = "Streak: Level " + (x + 1) + " for $" + hc.streak[x];
+    
+    if(lvl.money < 10) {
+      shrink[0].innerHTML = "Money: Level " + (lvl.money + 1) + " for $" + hc.money[lvl.money + 1];
+      if(bal >= hc.money[lvl.money + 1]) {
+        shrink[0].style.background = a3;
+      }else {
+        shrink[0].style.background = a33;
       }
+    }else {
+      shrink[0].innerHTML = "MAX";
     }
-    for(let x=0;x<hc.multi.length;x++){
-      if(bal > hc.multi[x]) {
-        shrink[2].innerHTML = "Multi: Level " + (x + 1) + " for $" + hc.multi[x];
+    if(lvl.streak < 10) {
+      shrink[1].innerHTML = "Streak: Level " + (lvl.streak + 1) + " for $" + hc.streak[lvl.streak + 1];
+      if(bal >= hc.streak[lvl.streak + 1]) {
+        shrink[1].style.background = a3;
+      }else {
+        shrink[1].style.background = a33;
       }
+    }else {
+      shrink[1].innerHTML = "MAX";
     }
-    for(let x=0;x<hc.protec.length;x++){
-      if(bal > hc.protec[x]) {
-        shrink[3].innerHTML = "Protec: Level " + (x + 1) + " for $" + hc.protec[x];
+    if(lvl.multi < 10) {
+      shrink[2].innerHTML = "Multi: Level " + (lvl.multi + 1) + " for $" + hc.multi[lvl.multi + 1];
+      if(bal >= hc.multi[lvl.multi + 1]) {
+        shrink[2].style.background = a3;
+      }else {
+        shrink[2].style.background = a33;
       }
+    }else {
+      shrink[2].innerHTML = "MAX";
     }
-  }setInterval(autowhatever, 2000);
+    if(lvl.protec < 10) {
+      shrink[3].innerHTML = "Protec: Level " + (lvl.protec + 1) + " for $" + hc.protec[lvl.protec + 1];
+      if(bal >= hc.protec[lvl.protec + 1]) {
+        shrink[3].style.background = a3;
+      }else {
+        shrink[3].style.background = a33;
+      }
+    }else {
+      shrink[3].innerHTML = "MAX";
+    }
+  }setInterval(autowhatever, 0);
 
   // Creates setttings placeholder
   let sep = cre(d,btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
