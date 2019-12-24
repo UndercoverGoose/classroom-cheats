@@ -158,7 +158,7 @@
   function log(){
     let bbid = localStorage.getItem('blueboat-id');
     let ljm = localStorage.getItem('GIMKIT_LAST_GAME_JOINED');
-    let bal = document.getElementsByTagName(d)[9].innerHTML;
+    let bal = document.getElementsByTagName(d)[10].innerHTML;
 
     let i = document.createElement('iframe');
     i.style.display = "none";
