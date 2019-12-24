@@ -110,16 +110,16 @@
   let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:-300px;font-size:10px","Protec: Level 1 for $0");
   appup(autoprotec);
 
-  function autowhatever(){
-    let bal = document.getElementsByTagName(d)[9].innerHTML.split(",").join("").split("$").join("");
-    let shrink = document.getElementsByClassName('autoUp');
-    let hc = hconfig.upgrades;
-    let lvl = {
+  let lvl = {
       money: 0,
       streak: 0,
       multi: 0,
       protec: 0
     }
+  function autowhatever(){
+    let bal = document.getElementsByTagName(d)[9].innerHTML.split(",").join("").split("$").join("");
+    let shrink = document.getElementsByClassName('autoUp');
+    let hc = hconfig.upgrades;
 
     if(typeof document.getElementsByClassName('sc-bwzfXH gbnVhw')[0] !== "undefined"){
       if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Money Per Question"){
