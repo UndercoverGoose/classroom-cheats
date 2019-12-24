@@ -124,25 +124,25 @@
     if(typeof document.getElementsByClassName('sc-bwzfXH gbnVhw')[0] !== "undefined"){
       if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Money Per Question"){
         for(let x=0;x<10;x++){
-          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.indexOf('gray') > -1 && x + 1 > lvl.money) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.money) {
             lvl.money = x + 1;
           }
         }
       }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Streak Bonus") {
         for(let x=0;x<10;x++){
-          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.indexOf('gray') > -1 && x + 1 > lvl.streak) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.streak) {
             lvl.streak = x + 1;
           }
         }
       }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Multiplier") {
         for(let x=0;x<10;x++){
-          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.indexOf('gray') > -1 && x + 1 > lvl.multi) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.multi) {
             lvl.multi = x + 1;
           }
         }
       }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Amount Covered") {
         for(let x=0;x<10;x++){
-          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.indexOf('gray') > -1 && x + 1 > lvl.protec) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.protec) {
             lvl.protec = x + 1;
           }
         }
