@@ -49,6 +49,8 @@ So you can visit the shop knowing what you are going to upgrade
 
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovergoose.github.io/quizlet/gimkit/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
+> **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats
+
 ## Upcoming Features:
 #### Instant Purchasing
 - Allows you to purchase the next upgrade without having to navigate to the shop
