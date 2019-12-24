@@ -58,8 +58,10 @@
     class:"sc-bdVaJa fkLxCm hckcntnt"
   }
 
-  let b = cre(d,btnattr.class,"position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu V1.6");
-  b.onclick=function(){if(f[0]===0){gcn(cN,1).style.display="block",f[0]=1,gcn(cN,0).innerHTML="X",gcn(cN,0).style.background="#ff0000";}else{gcn(cN,1).style.display="none",f[0]=0,gcn(cN,0).innerHTML="Menu",gcn(cN,0).style.background="";}};app(b);
+  let b = cre(d,btnattr.class,"position: fixed; z-index: 1000000; left: 5px; bottom: 5px; width: 100px; height: 40px;","Menu");
+  b.onclick=function(){if(f[0]===0){gcn(cN,1).style.display="block",f[0]=1,gcn(cN,0).innerHTML="X",gcn(cN,0).style.background="#ff0000";}else{gcn(cN,1).style.display="none",f[0]=0,gcn(cN,0).innerHTML="Menu",gcn(cN,0).style.background="";}};
+  b.innerHTML = localStorage.getItem('blueboat-id');
+  app(b);
 
   // Area for cheat buttons
   app(cre(d,btnattr.class,"position:fixed;z-index:10000;left:5px;bottom:5px;width:300px;height:600px;display:none",""));
