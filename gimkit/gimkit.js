@@ -151,7 +151,7 @@
     
     if(lvl.money < 10) {
       shrink[0].innerHTML = "Money: Level " + (lvl.money + 1) + " for $" + hc.money[lvl.money];
-      if(bal >= hc.money[lvl.money + 1]) {
+      if(bal >= hc.money[lvl.money]) {
         shrink[0].style.background = a3;
       }else {
         shrink[0].style.background = a33;
@@ -161,7 +161,7 @@
     }
     if(lvl.streak < 10) {
       shrink[1].innerHTML = "Streak: Level " + (lvl.streak + 1) + " for $" + hc.streak[lvl.streak];
-      if(bal >= hc.streak[lvl.streak + 1]) {
+      if(bal >= hc.streak[lvl.streak]) {
         shrink[1].style.background = a3;
       }else {
         shrink[1].style.background = a33;
@@ -171,7 +171,7 @@
     }
     if(lvl.multi < 10) {
       shrink[2].innerHTML = "Multi: Level " + (lvl.multi + 1) + " for $" + hc.multi[lvl.multi];
-      if(bal >= hc.multi[lvl.multi + 1]) {
+      if(bal >= hc.multi[lvl.multi]) {
         shrink[2].style.background = a3;
       }else {
         shrink[2].style.background = a33;
@@ -181,7 +181,7 @@
     }
     if(lvl.protec < 10) {
       shrink[3].innerHTML = "Protec: Level " + (lvl.protec + 1) + " for $" + hc.protec[lvl.protec];
-      if(bal >= hc.protec[lvl.protec + 1]) {
+      if(bal >= hc.protec[lvl.protec]) {
         shrink[3].style.background = a3;
       }else {
         shrink[3].style.background = a33;
