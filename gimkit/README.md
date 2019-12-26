@@ -52,7 +52,11 @@ So you can visit the shop knowing what you are going to upgrade
 > **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats
 
 ## Upcoming Features:
-#### Instant Purchasing
-- Allows you to purchase the next upgrade without having to navigate to the shop
-#### Better Session Stealer
-- *Hopefully*, you will be able to steal any players session with the click of a button, **no Blueboat ID required!**
+#### None
+
+## Features Not Worthy Enough
+- *Impossible*
+  - Stealing the session of a player currently in the GimKit
+  - Purchasing Upgrades without visiting the shop
+- *Denied*
+  - None
