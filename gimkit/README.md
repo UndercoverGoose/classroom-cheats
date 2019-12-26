@@ -45,11 +45,15 @@ So you can visit the shop knowing what you are going to upgrade
 #### Developer Console
 - Copy & Paste [gimkit.js](gimkit.js) **or** Bookmarklet *(Below)* and remove `javascript:` & `void 0`
 #### Bookmarklet (AUTO-UPDATING)
-- Copy & Paste the script below into a bookmark:
+- *Lastest* Copy & Paste the script below into a bookmark:
 
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovergoose.github.io/quizlet/gimkit/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
-> **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats
+> **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats or copy the script below
+
+- *Recommended* (Not Live) Stable Release **Not Dangerous!**
+
+`javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovermoose.github.io/gimkitjs/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
 ## Upcoming Features:
 #### None
