@@ -1,5 +1,14 @@
 # Gimkit
 
+# Alert!
+## Gimkit just recently updated yet again. They have implemented some new protection against these scripts. Some of the features will not work properly now! Affected Features:
+- Highlight Answer
+  - Gimkit has changed the way the answer choices are setup which breaks the highlighting. Occassionally the answer can be right, but **MOST** of the time it is incorrect.
+- Bigger Answer
+  - This is affected mainly because it sizes up the same answer choice as the highlight answer does.
+- Hidden Answer
+  - This is affected aswell as it uses the same algorithm to find the corrent answer as the highlight answer does.
+
 ## Features:
 #### Highlight Answer
 - Highlights the correct answer in a nice bold white color
