@@ -7,7 +7,8 @@
 - Bigger Answer
   - This is affected mainly because it sizes up the same answer choice as the highlight answer does.
 - Hidden Answer
-  - This is affected aswell as it uses the same algorithm to find the corrent answer as the highlight answer does.
+  - This is affected aswell as it uses the same algorithm to find the correct answer as the highlight answer does.
+### I recommend not using the hack at the moment, as Gimkit now has a script detection system in place. While playing throughout the Gimkit you could be kicked from the scripts being detected.
 
 ## Features:
 #### Highlight Answer
