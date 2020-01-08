@@ -4,7 +4,11 @@
 */
 
 (function(){
-  function dc(x){console.debug(x)};
+  let logtime;
+  function dc(x){
+    console.debug("(" + (new Date().getTime() - logtime) + "ms)" + x);
+    logtime = new Date().getTime();
+  };
   dc("GimKit Hacks Loaded; Preparing Variables...");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
