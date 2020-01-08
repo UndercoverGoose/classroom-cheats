@@ -4,15 +4,7 @@
 */
 
 (function(){
-  let logtime = new Date().getTime();
-  function dc(x){
-    console.log("\x1b[32m%s\x1b[0m", "(" + (new Date().getTime() - logtime) + "ms)" + x);
-    logtime = new Date().getTime();
-  };
-  function err(x){
-    console.log("\x1b[31m%s\x1b[0m", "Script Error: " + x);
-  };
-  dc("GimKit Hacks Loaded; Preparing Variables...");
+  console.debug("%cRunning Gimkit Hack V1.6", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -25,7 +17,6 @@
   function appd(v){document.getElementsByClassName(cN)[1].appendChild(v)}
   function apps(v){document.getElementsByClassName(cN)[7].appendChild(v)}
   function appup(v){document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(v)}
-  dc("Prepared Variables; Gathering questions information...");
 
   // Applies default button color and look without having to purchase an upgrade to update the style
   let newstyle = document.createElement('style');
@@ -35,7 +26,6 @@
   // Gets answers/questions
   let j=JSON[Object.keys(JSON)],qs=[],as=[];
   for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
-  dc("Gathered question information; Setting up config...");
   
   // Cheat toggles and "Menu" button creation
   let f = [0, 0, 0, 0, 0, 0];
@@ -65,7 +55,6 @@
       protec:[0,10,250,1e3,25e3,1e5,1e6,5e6,25e6,5e8]
     }
   }
-  dc("Config setup; Created 'Cheat' Menu and events...");
   let btnattr={
     style:"width:200px;height:40px;margin-top:3px;background:#aa3333",
     class:"sc-bdVaJa fkLxCm hckcntnt"
@@ -122,7 +111,6 @@
 
   let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:-300px;font-size:10px","Protec: Level 1 for $0");
   appup(autoprotec);
-  dc("Finished; Defining functions that make the cheats work...");
   
   let lvl = {
       money: 0,
@@ -135,35 +123,33 @@
     let shrink = document.getElementsByClassName('autoUp');
     let hc = hconfig.upgrades;
 
-    try{
-      if(typeof document.getElementsByClassName('sc-bwzfXH gbnVhw')[0] !== "undefined"){
-        if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Money Per Question"){
-          for(let x=0;x<10;x++) {
-            if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.money) {
-              lvl.money = x + 1;
-            }
+    if(typeof document.getElementsByClassName('sc-bwzfXH gbnVhw')[0] !== "undefined"){
+      if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Money Per Question"){
+        for(let x=0;x<10;x++) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.money) {
+            lvl.money = x + 1;
           }
-        }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Streak Bonus") {
-          for(let x=0;x<10;x++) {
-            if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.streak) {
-              lvl.streak = x + 1;
-            }
+        }
+      }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Streak Bonus") {
+        for(let x=0;x<10;x++) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.streak) {
+            lvl.streak = x + 1;
           }
-        }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Multiplier") {
-          for(let x=0;x<10;x++) {
-            if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.multi) {
-              lvl.multi = x + 1;
-            }
+        }
+      }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Multiplier") {
+        for(let x=0;x<10;x++) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.multi) {
+            lvl.multi = x + 1;
           }
-        }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Amount Covered") {
-          for(let x=0;x<10;x++) {
-            if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.protec) {
-              lvl.protec = x + 1;
-            }
+        }
+      }else if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Amount Covered") {
+        for(let x=0;x<10;x++) {
+          if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.protec) {
+            lvl.protec = x + 1;
           }
         }
       }
-    }catch(e) {err("Could not find any shop levels...")}
+    }
     
     if(lvl.money < 10) {
       shrink[0].innerHTML = "Money: Level " + (lvl.money + 1) + " for $" + hc.money[lvl.money];
@@ -249,7 +235,6 @@
   function stealSession(){
     let session = prompt("Enter Session ID:", "");
     if(session.length === 21) {
-      dc("Session Stealer Activated; Current Session: " + localStorage.getItem('blueboat-id'));
       localStorage.setItem('blueboat-id', session);
       document.location.reload();
     }else {
@@ -300,7 +285,6 @@
     }catch(err){}
   }setInterval(themechanger, 0);
 
-  dc("Completed; Creating Keybinds...");
   
   // Key events for added features
   window.onkeydown=function(e){
@@ -322,5 +306,4 @@
       hiddenanswer();
     }
   }
-  dc("Done! UnderCoverGoose's GimKit Hack has loaded.");
 }());
