@@ -4,8 +4,8 @@
 */
 
 (function(){
-  function d(x){console.debug(x)};
-  d("GimKit Hacks Loaded; Preparing Variables...");
+  function dc(x){console.debug(x)};
+  dc("GimKit Hacks Loaded; Preparing Variables...");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -18,7 +18,7 @@
   function appd(v){document.getElementsByClassName(cN)[1].appendChild(v)}
   function apps(v){document.getElementsByClassName(cN)[7].appendChild(v)}
   function appup(v){document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(v)}
-  d("Prepared Variables; Gathering questions information...");
+  dc("Prepared Variables; Gathering questions information...");
 
   // Applies default button color and look without having to purchase an upgrade to update the style
   let newstyle = document.createElement('style');
@@ -28,7 +28,7 @@
   // Gets answers/questions
   let j=JSON[Object.keys(JSON)],qs=[],as=[];
   for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
-  d("Gathered question information; Setting up config...");
+  dc("Gathered question information; Setting up config...");
   
   // Cheat toggles and "Menu" button creation
   let f = [0, 0, 0, 0, 0, 0];
@@ -58,7 +58,7 @@
       protec:[0,10,250,1e3,25e3,1e5,1e6,5e6,25e6,5e8]
     }
   }
-  d("Config setup; Created 'Cheat' Menu and events...");
+  dc("Config setup; Created 'Cheat' Menu and events...");
   let btnattr={
     style:"width:200px;height:40px;margin-top:3px;background:#aa3333",
     class:"sc-bdVaJa fkLxCm hckcntnt"
@@ -115,8 +115,7 @@
 
   let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:-300px;font-size:10px","Protec: Level 1 for $0");
   appup(autoprotec);
-
-  d("Finished; Defining functions that make the cheats work...");
+  dc("Finished; Defining functions that make the cheats work...");
   
   let lvl = {
       money: 0,
@@ -241,7 +240,7 @@
   function stealSession(){
     let session = prompt("Enter Session ID:", "");
     if(session.length === 21) {
-      d("Session Stealer Activated; Current Session: " + localStorage.getItem('blueboat-id'));
+      dc("Session Stealer Activated; Current Session: " + localStorage.getItem('blueboat-id'));
       localStorage.setItem('blueboat-id', session);
       document.location.reload();
     }else {
@@ -292,7 +291,7 @@
     }catch(err){}
   }setInterval(themechanger, 0);
 
-  d("Completed; Creating Keybinds...");
+  dc("Completed; Creating Keybinds...");
   
   // Key events for added features
   window.onkeydown=function(e){
@@ -314,5 +313,5 @@
       hiddenanswer();
     }
   }
-  d("Done! UnderCoverGoose's GimKit Hack has loaded.");
+  dc("Done! UnderCoverGoose's GimKit Hack has loaded.");
 }());
