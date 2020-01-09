@@ -297,6 +297,7 @@ var nhq = [];
       if(nhq.indexOf(q) === -1 && document.getElementsByClassName('sc-bwzfXH gbnVhw').length === 4) {
         nhq.push(q);
         nha.push(a);
+        console.log(nhq, nha);
       }
     }
   }setInterval(themechanger, 0);
