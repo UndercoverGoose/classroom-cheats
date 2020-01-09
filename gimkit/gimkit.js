@@ -2,6 +2,8 @@
 * Made by: UndercoverGoose
 * Version: 1.6.2
 */
+var nha = [];
+var nhq = [];
 
 (function(){
   console.debug("%cRunning Gimkit Hack V1.6.2", "color:#FF5555;font-size:20px;");
@@ -26,10 +28,6 @@
   // Gets answers/questions
   let j=JSON[Object.keys(JSON)],qs=[],as=[];
   for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
-  
-  // [WIP Highlight Answer]
-  let nha = [];
-  let nhq = [];
   
   // Cheat toggles and "Menu" button creation
   let f = [0, 0, 0, 0, 0, 0];
