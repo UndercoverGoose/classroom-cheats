@@ -197,6 +197,7 @@ var nhq = [];
 
   // Creates setttings placeholder
   let sep = cre(d,btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
+  console.log(sep);
   app(sep);
 
   let setxt = document.createElement('span');
