@@ -292,7 +292,7 @@ var nhq = [];
       let q = document.getElementsByClassName("sc-bwzfXH gbnVhw")[0].childNodes[0].childNodes[0].childNodes[0].innerHTML;
       let a = document.getElementsByClassName("sc-bwzfXH gbnVhw")[2].childNodes[0].childNodes[0].childNodes[0].innerHTML;
       
-      if(nhq.indexOf(q) === -1) {
+      if(nhq.indexOf(q) === -1 && document.getElementsByClassName('sc-bwzfXH gbnVhw').length === 4) {
         nhq.push(q);
         nha.push(a);
         console.log(q + " = " + a, nhq, nha);
