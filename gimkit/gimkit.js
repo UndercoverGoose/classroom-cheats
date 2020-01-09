@@ -261,7 +261,7 @@
   }
   function hiddenanswer(){
     try {
-      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(nhq[nhq.indexOf(q)])+1;
+      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(nha[nhq.indexOf(q)])+1;
       document.title=i + "lay Gimkit! - Enter game code here";
     }catch(err){}
   }
