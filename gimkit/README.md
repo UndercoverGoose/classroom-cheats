@@ -1,11 +1,8 @@
 # Gimkit
 
-# Alert!
-## Gimkit just recently updated yet again. They have implemented some new protection against these scripts. Some of the features will not work properly now!
-- Highlight Answer, Hidden Answer, and Bigger Answer are affected.
-  - Whats Happening? Gimkit fixed the question answers variable. The variable JSON contains all the questions along with answers. The answers were previously identified with "correct": true, but all answer choices are now *false*. Because of this, these hacks will just select the first option within the variable which may or may not be the correct option.
-  
-### I recommend not using the hack at the moment, as Gimkit now has a script detection system in place. While playing throughout the Gimkit you could be kicked from the scripts being detected.
+## Good News!
+- Highlight Answer, Hidden Answer, and Bigger Answer are working *AGAIN*
+  - There is just one catch, you will have to provide the cheats with the answers. To do this, you will have to go through *each* question and get it *wrong* (Soon youll be able to get it correct). Upon doing this, you'll then view the correct answer and it will get logged and now that questions works! You can enable the Highlight Answer script to see if you have the questions answer.
 
 ## Features:
 #### Highlight Answer
