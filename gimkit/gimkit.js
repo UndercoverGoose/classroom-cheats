@@ -18,7 +18,7 @@ var nhq = [];
   function app(v){document.body.appendChild(v)}
   function appd(v){document.getElementsByClassName(cN)[1].appendChild(v)}
   function apps(v){document.getElementsByClassName(cN)[7].appendChild(v)}
-  function appup(v){document.getElementsByClassName('sc-cbkKFq bpholJ')[0].appendChild(v)}
+  function appup(v){document.getElementsByClassName('sc-cbkKFq')[0].appendChild(v)}
 
   // Applies default button color and look without having to purchase an upgrade to update the style
   let newstyle = document.createElement('style');
