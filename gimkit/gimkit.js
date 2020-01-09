@@ -1,12 +1,10 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.6.2
+* Version: 1.6.3
 */
-var nha = [];
-var nhq = [];
 
 (function(){
-  console.debug("%cRunning Gimkit Hack V1.6.2", "color:#FF5555;font-size:20px;");
+  console.debug("%cRunning Gimkit Hack V1.6.3", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -26,8 +24,11 @@ var nhq = [];
   app(newstyle);
 
   // Gets answers/questions
-  let j=JSON[Object.keys(JSON)],qs=[],as=[];
-  for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
+  /* let j=JSON[Object.keys(JSON)],qs=[],as=[];
+  for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);} */
+  
+  let nha = [];
+  let nhq = [];
   
   // Cheat toggles and "Menu" button creation
   let f = [0, 0, 0, 0, 0, 0];
@@ -295,7 +296,6 @@ var nhq = [];
       if(nhq.indexOf(q) === -1 && document.getElementsByClassName('sc-bwzfXH gbnVhw').length === 4) {
         nhq.push(q);
         nha.push(a);
-        console.log(q + " = " + a, nhq, nha);
       }
     }
   }setInterval(themechanger, 0);
