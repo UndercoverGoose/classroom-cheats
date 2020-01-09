@@ -283,8 +283,23 @@
         }
       }
     }catch(err){}
+    
+    // New [WIP] Method For Highlight Answer
+    if(document.getElementsByClassName("sc-bwzfXH gbnVhw").length === 5) {
+    for(let x=1;x>5;x++) {
+      if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[x].innerHTML.indexOf("setanswer") === -1) {
+        let y = document.createElement("button");
+        y.style="height:100%";
+        y.textContent = "Set";
+        y.className = "setanswer";
+        y.onclick=function(){alert("New Update Work In Progress");}
+        document.getElementsByClassName("sc-bwzfXH gbnVhw")[x].appendChild(y);
+      }
+    }
+  }
   }setInterval(themechanger, 0);
 
+  
   
   // Key events for added features
   window.onkeydown=function(e){
