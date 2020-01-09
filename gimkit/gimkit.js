@@ -102,16 +102,16 @@ var nhq = [];
   // Creates Upgradeable Upgrade Display
   let autoclass = "sc-bdVaJa fkLxCm autoUp";
 
-  let automoney = cre(d,autoclass,btnattr.style+";position:absolute;margin-left: 100px;font-size:10px","Money: Level 1 for $0");
+  let automoney = cre(d,autoclass,btnattr.style+";position:absolute;margin-left: 100px;font-size:15px","Money: Level 1 for $0");
   appup(automoney);
 
-  let autostreak = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:300px;font-size:10px","Streak: Level 1 for $0");
+  let autostreak = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:300px;font-size:15px","Streak: Level 1 for $0");
   appup(autostreak);
 
-  let automulti = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:-100px;font-size:10px","Multi: Level 1 for $0");
+  let automulti = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:500px;font-size:15px","Multi: Level 1 for $0");
   appup(automulti);
 
-  let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:-300px;font-size:10px","Protec: Level 1 for $0");
+  let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:700px;font-size:15px","Protec: Level 1 for $0");
   appup(autoprotec);
   
   let lvl = {
