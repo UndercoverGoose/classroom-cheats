@@ -5,7 +5,8 @@
   - There is just one catch, you will have to provide the cheats with the answers. To do this, you will have to go through *each* question and get it *wrong* (Soon youll be able to get it correct). Upon doing this, you'll then view the correct answer and it will get logged and now that questions works! You can enable the Highlight Answer script to see if you have the questions answer.
   
 ## aaaaand some bad news ;(
-- GimKit has introduced a client side injection detector, which as the name suggests, will detect these scripts
+- GimKit has introduced a client side injection detector, which as the name suggests, will detect these scripts.
+  - I am currently investigating what causes the detection and how it can be prevented.
 
 ## Features:
 #### Highlight Answer
