@@ -1,10 +1,10 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.6
+* Version: 1.6.2
 */
 
 (function(){
-  console.debug("%cRunning Gimkit Hack V1.6", "color:#FF5555;font-size:20px;");
+  console.debug("%cRunning Gimkit Hack V1.6.2", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -26,6 +26,10 @@
   // Gets answers/questions
   let j=JSON[Object.keys(JSON)],qs=[],as=[];
   for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
+  
+  // [WIP Highlight Answer]
+  let nha = [];
+  let nhq = [];
   
   // Cheat toggles and "Menu" button creation
   let f = [0, 0, 0, 0, 0, 0];
@@ -227,7 +231,7 @@
   // Functions that make the cheats work
   function highlight(){
     try{
-      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(nha[nhq.indexOf(q)])+1;
       d[i].parentNode.parentNode.style.background="white",d[i].style.color="black";
     }catch(err){}
   }
@@ -244,19 +248,19 @@
 
   function biganswer(){
     try{
-      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(nha[nhq.indexOf(q)])+1;
       d[i].parentNode.parentNode.parentNode.style="position:fixed;left:5px";
     }catch(err){}
   }
   function inputanswer(){
     try{
       let q=document.getElementsByClassName('notranslate lang-en')[0].innerHTML;
-      document.getElementsByClassName('sc-jhAzac egTZap')[0].value=as[qs.indexOf(q)];
+      document.getElementsByClassName('sc-jhAzac egTZap')[0].value=nha[nhq.indexOf(q)];
     }catch(err){}
   }
   function hiddenanswer(){
     try {
-      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(as[qs.indexOf(q)])+1;
+      let d=document.getElementsByClassName('notranslate lang-en'),q=d[0].innerHTML,a=[d[1].innerHTML,d[2].innerHTML,d[3].innerHTML,d[4].innerHTML],i=a.indexOf(nhq[nhq.indexOf(q)])+1;
       document.title=i + "lay Gimkit! - Enter game code here";
     }catch(err){}
   }
@@ -285,18 +289,16 @@
     }catch(err){}
     
     // New [WIP] Method For Highlight Answer
-    if(document.getElementsByClassName("sc-bwzfXH gbnVhw").length === 5) {
-    for(let x=1;x>5;x++) {
-      if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[x].innerHTML.indexOf("setanswer") === -1) {
-        let y = document.createElement("button");
-        y.style="height:100%";
-        y.textContent = "Set";
-        y.className = "setanswer";
-        y.onclick=function(){alert("New Update Work In Progress");}
-        document.getElementsByClassName("sc-bwzfXH gbnVhw")[x].appendChild(y);
+    if(typeof document.getElementsByClassName("fas fa-arrow-down")[0] === "object") {
+      let q = document.getElementsByClassName("sc-bwzfXH gbnVhw")[0].childNodes[0].childNodes[0].childNodes[0].innerHTML;
+      let a = document.getElementsByClassName("sc-bwzfXH gbnVhw")[2].childNodes[0].childNodes[0].childNodes[0].innerHTML;
+      
+      if(nhq.indexOf(q) === -1) {
+        nhq.push(q);
+        nha.push(a);
+        console.log(q + " = " + a, nhq, nha);
       }
     }
-  }
   }setInterval(themechanger, 0);
 
   
