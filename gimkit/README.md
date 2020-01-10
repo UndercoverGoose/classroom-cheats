@@ -1,5 +1,7 @@
 # Gimkit
 
+#### It is against Gimkit's terms of service to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
+
 ## Good News!
 - Highlight Answer, Hidden Answer, and Bigger Answer are working *AGAIN*
   - There is just one catch, you will have to provide the cheats with the answers. To do this, you will have to go through *each* question and get it *wrong* (Soon youll be able to get it correct). Upon doing this, you'll then view the correct answer and it will get logged and now that questions works! You can enable the Highlight Answer script to see if you have the questions answer.
