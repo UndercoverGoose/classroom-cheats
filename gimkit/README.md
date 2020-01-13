@@ -1,4 +1,4 @@
-# Gimkit
+# Gimkit *V1.7*
 
 #### It is against Gimkit's terms of service to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
@@ -54,13 +54,13 @@ So you can visit the shop knowing what you are going to upgrade
 #### Developer Console
 - Copy & Paste [gimkit.js](gimkit.js) **or** Bookmarklet *(Below)* and remove `javascript:` & `void 0`
 #### Bookmarklet (AUTO-UPDATING)
-- *Lastest* Copy & Paste the script below into a bookmark:
+- *Lastest* - Copy & Paste the script below into a bookmark:
 
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovergoose.github.io/quizlet/gimkit/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
 > **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats or copy the script below
 
-- *Recommended* (Not Live) Stable Release **Not Dangerous!**
+- *Recommended* - (Not Live) Stable Release **Not Dangerous!** `*running v1.7*`
 
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovermoose.github.io/gimkitjs/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
