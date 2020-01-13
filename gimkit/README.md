@@ -27,7 +27,11 @@
 ##### Why?
 So people who are suspicious will now think you are legit
 #### Keybinds
-- Keys: Hide Menu > C, Highlight > H, Big Answer > B, Input Answer > I, Hidden Answer > O
+- Keys: Hide Menu > C
+- Highlight > H
+- Big Answer > B
+- Input Answer > I
+- Hidden Answer > O
 ##### Why?
 If a teacher, or someone who you don't want to get caught cheating with comes over, and can simply press C or another keybine to hide what you have open
 #### Applying Themes Without Buying Them
@@ -61,7 +65,7 @@ So you can visit the shop knowing what you are going to upgrade
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovermoose.github.io/gimkitjs/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
 ## Upcoming Features:
-#### None
+- Changing of keybinds
 
 ## Features Not Worthy Enough
 - *Impossible*
