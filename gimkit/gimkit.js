@@ -1,13 +1,13 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.6.3
+* Version: 1.6.4
 */
 
 var nha = [];
 var nhq = [];
 
 (function(){
-  console.debug("%cRunning Gimkit Hack V1.6.3", "color:#FF5555;font-size:20px;");
+  console.debug("%cRunning Gimkit Hack V1.6.4", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -27,8 +27,8 @@ var nhq = [];
   app(newstyle);
 
   // Gets answers/questions
-  /* let j=JSON[Object.keys(JSON)],qs=[],as=[];
-  for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);} */
+  let j=JSON[Object.keys(JSON)],qs=[],as=[];
+  for(let x=0;x<j.length;x++){qs.push(j[x].text),as.push(j[x].answers[0].text);}
   
   // Cheat toggles and "Menu" button creation
   let f = [0, 0, 0, 0, 0, 0];
@@ -256,7 +256,7 @@ var nhq = [];
   function inputanswer(){
     try{
       let q=document.getElementsByClassName('notranslate lang-en')[0].innerHTML;
-      document.getElementsByClassName('sc-jhAzac egTZap')[0].value=nha[nhq.indexOf(q)];
+      document.getElementsByClassName('sc-jhAzac egTZap')[0].value=as[qs.indexOf(q)];
     }catch(err){}
   }
   function hiddenanswer(){
