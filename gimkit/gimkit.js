@@ -29,7 +29,9 @@ var nhq = [];
   /* NEW METHOD */
   let qs = [],
       as = [];
-  document.head.appendChild(document.createElement('script');x.src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js");
+  let script = document.createElement('script');
+  script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"
+  document.head.appendChild(script);
   $.getJSON("https://www.gimkit.com/api/games/fetch/5e1ce19a7d43ac0022e6bdc5",function(data){
     let q = data.kit.questions;
     for(let x=0;x<q.length;x++) {
