@@ -2,15 +2,9 @@
 
 #### It is against Gimkit's terms of service to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
-## Good News!
-- Highlight Answer, Hidden Answer, and Bigger Answer are working *AGAIN*
-  - There is just one catch, you will have to provide the cheats with the answers. To do this, you will have to go through *each* question and get it *wrong* (Soon youll be able to get it correct). Upon doing this, you'll then view the correct answer and it will get logged and now that questions works! You can enable the Highlight Answer script to see if you have the questions answer.
-> **NOTE:** When viewing the correct answer, you cannot instantaneously go back to the questions. You have to wait a second and then go back for it to log the correct answer.
+## *EXTREMELY Good News!*
+- Highlight Answer, and all the others are now fully *WORKING AGAIN*! No need to get the answer wrong anymore! ***Works Just Like Before***
   
-## aaaaand some bad news ;(
-- GimKit has introduced a client side injection detector, which as the name suggests, will detect these scripts.
-  - I am currently investigating what causes the detection and how it can be prevented.
-
 ## Features:
 #### Highlight Answer
 - Highlights the correct answer in a nice bold white color
