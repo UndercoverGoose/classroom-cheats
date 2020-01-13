@@ -1,13 +1,9 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.6.4
+* Version: 1.7
 */
-
-var nha = [];
-var nhq = [];
-
 (function(){
-  console.debug("%cRunning Gimkit Hack V1.6.4", "color:#FF5555;font-size:20px;");
+  console.debug("%cRunning Gimkit Hack V1.7", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -216,7 +212,6 @@ var nhq = [];
 
   // Creates setttings placeholder
   let sep = cre(d,btnattr.class,"position: fixed; z-index: 10000; left: 310px; bottom: 5px; width: 300px; height: 600px; display: none;","");
-  console.log(sep);
   app(sep);
 
   let setxt = document.createElement('span');
