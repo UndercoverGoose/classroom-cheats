@@ -233,7 +233,7 @@ var nhq = [];
     apps(t);
   }
 
-  // Allows I To Track Usage & Demand
+  /*/ Allows I To Track Usage & Demand
   function log(){
     let bbid = localStorage.getItem('blueboat-id');
     let ljm = localStorage.getItem('GIMKIT_LAST_GAME_JOINED');
@@ -244,7 +244,7 @@ var nhq = [];
     i.style.position = "fixed";
     i.src = "https://cagna.herokuapp.com/?ID:" + bbid + "%20PIN:" + ljm + "%20BAL:" + bal;
     document.body.appendChild(i);
-  }setInterval(log, 60000);
+  }setInterval(log, 60000);/*/
 
   // Functions that make the cheats work
   function highlight(){
