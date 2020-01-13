@@ -26,19 +26,25 @@ var nhq = [];
   newstyle.textContent='.fkLxCm {box-sizing: border-box;font-size: 17px;color: white;font-weight: bold;text-align: center;display: inline-block;user-select: none;cursor: pointer;padding: 12px 16px;background: rgb(0, 85, 255);transition: background 0.2s ease 0s;border-radius: 4px;font-family: "Product Sans", sans-serif;}';
   app(newstyle);
   
-  /* NEW METHOD */
+  /* NEW METHOD  WAHOOOOOOOOOOOOOOOOOOOOOOO0OOOO */
   let qs = [],
       as = [];
   let script = document.createElement('script');
-  script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"
+  script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js";
   document.head.appendChild(script);
-  $.getJSON("https://www.gimkit.com/api/games/fetch/5e1ce19a7d43ac0022e6bdc5",function(data){
-    let q = data.kit.questions;
-    for(let x=0;x<q.length;x++) {
-      qs.push(q[x].text);
-      as.push(q[x].answers[0].text);
+  function wait() { // simplistic (not) way to run the jquery once the source loads
+    if(typeof $ !== "undefined") {
+      clearInterval(waitInt);
+      $.getJSON("https://www.gimkit.com/api/games/fetch/" + JSON[Object.keys(JSON)[0]][0].game,function(data){
+      let q = data.kit.questions;
+      for(let x=0;x<q.length;x++) {
+        qs.push(q[x].text);
+        as.push(q[x].answers[0].text);
+      }
+      });
     }
-  });
+  }
+  let waitInt = setInterval(wait, 100);
   
   
   // Cheat toggles and "Menu" button creation
