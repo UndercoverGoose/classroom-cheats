@@ -67,3 +67,5 @@
   - Purchasing Upgrades without visiting the shop
 - *Denied*
   - None
+
+## [technical/README.md](Technical Explanation)
