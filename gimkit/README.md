@@ -68,4 +68,4 @@
 - *Denied*
   - None
 
-## [technical/README.md](Technical Explanation)
+## [Technical Explanation(technical/README.md)
