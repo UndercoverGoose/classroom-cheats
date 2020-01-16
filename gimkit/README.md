@@ -1,4 +1,4 @@
-# Gimkit *V1.7*
+# Gimkit *V1.7.16-1*
 
 #### It is against Gimkit's [terms of service](https://www.gimkit.com/terms-of-service#integrity-of-the-game-and-community) to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
@@ -57,7 +57,7 @@
 
 > **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats or copy the script below
 
-- *Recommended* - (Not Live) Stable Release **Not Dangerous!** `*running v1.7*`
+- *Recommended* - (Not Live) Stable Release **Not Dangerous!** `*running v1.7.16-1*`
 
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovermoose.github.io/gimkitjs/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
