@@ -1,6 +1,6 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.7
+* Version: 1.7.16-1
 */
 (function(){
   console.debug("%cRunning Gimkit Hack V1.7", "color:#FF5555;font-size:20px;");
