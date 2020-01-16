@@ -1,6 +1,6 @@
 # Gimkit *V1.7*
 
-#### It is against Gimkit's terms of service to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
+#### It is against Gimkit's [terms of service](https://www.gimkit.com/terms-of-service) to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
 ## *EXTREMELY Good News!*
 - Highlight Answer, and all the others are now fully *WORKING AGAIN*! No need to get the answer wrong anymore! ***Works Just Like Before***
