@@ -146,7 +146,7 @@
             lvl.money = x + 1;
           }
         }
-      }else if(document.getElementsByClassName('sc-bdVaJa Harxh)[0].childNodes[0].childNodes[0].innerHTML === "Streak Bonus") {
+      }else if(document.getElementsByClassName('sc-bdVaJa Harxh')[0].childNodes[0].childNodes[0].innerHTML === "Streak Bonus") {
         for(let x=0;x<10;x++) {
           if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.streak) {
             lvl.streak = x + 1;
