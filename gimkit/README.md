@@ -5,6 +5,9 @@
 ## *EXTREMELY Good News!*
 - Highlight Answer, and all the others are now fully *WORKING AGAIN*! No need to get the answer wrong anymore! ***Works Just Like Before***
   
+## *Warning*
+- Gimkit has implemented new detection to protect against scripts. To make sure you do not get kicked, try not to answer too quickly, as you will get kicked for that. You will probably eventually get kicked for scripts detected, as I do not know how it detects the scripts *yet*
+  
 ## Features:
 #### Highlight Answer
 - Highlights the correct answer in a nice bold white color
