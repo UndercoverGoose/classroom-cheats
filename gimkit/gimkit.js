@@ -231,7 +231,7 @@
     }
 
     if(new Date().getTime() - startTime >= 10000) {
-      starTime = new Date().getTime();
+      startTime = new Date().getTime();
       balanceChanges = [];
       console.log("10 Seconds is Up");
     }
