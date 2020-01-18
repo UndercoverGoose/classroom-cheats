@@ -2,6 +2,9 @@
 * Made by: UndercoverGoose
 * Version: 1.7.18-1
 */
+var startTime = new Date().getTime();
+var balanceChanges = [];
+
 (function(){
   console.debug("%cRunning Gimkit Hack V1.7", "color:#FF5555;font-size:20px;");
   
@@ -10,8 +13,8 @@
   let d = "div";
   let a3 = "#33aa33";
   let a33 = "#aa3333";
-  let startTime = new Date().getTime();
-  let balanceChanges = [];
+  /*let startTime = new Date().getTime();
+  let balanceChanges = [];*/
   function gcn(x,y){return document.getElementsByClassName(x)[y]}
   function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.innerHTML=i;return x;}
   function app(v){document.body.appendChild(v)}
@@ -215,7 +218,7 @@
       
       if(balanceChanges.length === 0 && currentBal > 0) {
         let bcx = document.createElement("span");
-        bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white";
+        bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white; top: 5px;";
         bcx.id = "qps";
         document.body.appendChild(bcx);
         balanceChanges.push(currentBal);
