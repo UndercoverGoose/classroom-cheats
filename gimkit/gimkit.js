@@ -217,6 +217,7 @@
         let bcx = document.createElement("span");
         bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white";
         bcx.id = "qps";
+        document.body.appendChild(bcx);
         balanceChanges.push(currentBal);
       }
       
