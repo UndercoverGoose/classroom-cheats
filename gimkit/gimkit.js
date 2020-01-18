@@ -140,7 +140,7 @@
     let hc = hconfig.upgrades;
 
     if(typeof document.getElementsByClassName('sc-bdVaJa Harxh')[0] !== "undefined"){
-      if(document.getElementsByClassName('sc-bwzfXH gbnVhw')[0].childNodes[0].childNodes[0].innerHTML === "Money Per Question"){
+      if(document.getElementsByClassName('sc-bdVaJa Harxh')[0].childNodes[0].childNodes[0].innerHTML === "Money Per Question"){
         for(let x=0;x<10;x++) {
           if(document.getElementsByClassName('sc-eXEjpC joQyGL')[x].innerHTML.lastIndexOf('gray') > -1 && x + 1 > lvl.money) {
             lvl.money = x + 1;
