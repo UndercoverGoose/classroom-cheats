@@ -2,9 +2,6 @@
 * Made by: UndercoverGoose
 * Version: 1.7.18-1
 */
-var startTime = new Date().getTime();
-var balanceChanges = [];
-
 (function(){
   console.debug("%cRunning Gimkit Hack V1.7", "color:#FF5555;font-size:20px;");
   
@@ -13,8 +10,8 @@ var balanceChanges = [];
   let d = "div";
   let a3 = "#33aa33";
   let a33 = "#aa3333";
-  /*let startTime = new Date().getTime();
-  let balanceChanges = [];*/
+  let startTime = new Date().getTime();
+  let balanceChanges = [];
   function gcn(x,y){return document.getElementsByClassName(x)[y]}
   function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.innerHTML=i;return x;}
   function app(v){document.body.appendChild(v)}
@@ -216,16 +213,23 @@ var balanceChanges = [];
       // Questions Per Second
       let currentBal = parseInt(document.getElementsByTagName("div")[9].innerHTML.slice(1).split(",").join(""));
       
-      if(balanceChanges.length === 0 && currentBal > 0) {
-        let bcx = document.createElement("span");
-        bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white; top: 5px;";
-        bcx.id = "qps";
-        document.body.appendChild(bcx);
+      if(balanceChanges.length === 0) {
+        if(typeof document.getElementById("qps") !== null ){
+          let bcx = document.createElement("span");
+          bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white; top: 5px;";
+          bcx.id = "qps";
+          document.body.appendChild(bcx);
+        }
         balanceChanges.push(currentBal);
       }
       
-      if(balanceChanges[balanceChanges.length - 1] < currentBal) {
+      if(balanceChanges[balanceChanges.length - 1] !== currentBal) {
         balanceChanges.push(currentBal);
+      }
+      
+      if(new Date().getTime() - startTime >= 10000) {
+        starTime = new Date().getTime();
+        balanceChanges = [];
       }
       
       document.getElementById("qps").innerHTML = Math.floor(balanceChanges.length / (new Date().getTime() - startTime)) + " questions per second";
