@@ -210,31 +210,34 @@
         shrink[3].innerHTML = "MAX";
       }
       
-      // Questions Per Second
-      let currentBal = parseInt(document.getElementsByTagName("div")[9].innerHTML.slice(1).split(",").join(""));
-      
-      if(balanceChanges.length === 0) {
-        if(typeof document.getElementById("qps") !== null ){
-          let bcx = document.createElement("span");
-          bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white; top: 5px;";
-          bcx.id = "qps";
-          document.body.appendChild(bcx);
-        }
-        balanceChanges.push(currentBal);
-      }
-      
-      if(balanceChanges[balanceChanges.length - 1] !== currentBal) {
-        balanceChanges.push(currentBal);
-      }
-      
-      if(new Date().getTime() - startTime >= 10000) {
-        starTime = new Date().getTime();
-        balanceChanges = [];
-      }
-      
-      document.getElementById("qps").innerHTML = Math.floor(balanceChanges.length / (new Date().getTime() - startTime)) + " questions per second";
       
     }catch(err){}
+    
+    // Questions Per Second
+    let currentBal = parseInt(document.getElementsByTagName("div")[9].innerHTML.slice(1).split(",").join(""));
+
+    if(balanceChanges.length === 0) {
+      if(typeof document.getElementById("qps") !== null ){
+        let bcx = document.createElement("span");
+        bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white; top: 5px;";
+        bcx.id = "qps";
+        document.body.appendChild(bcx);
+      }
+      balanceChanges.push(currentBal);
+    }
+
+    if(balanceChanges[balanceChanges.length - 1] !== currentBal) {
+      balanceChanges.push(currentBal);
+    }
+
+    if(new Date().getTime() - startTime >= 10000) {
+      starTime = new Date().getTime();
+      balanceChanges = [];
+      console.log("10 Seconds is Up");
+    }
+
+    document.getElementById("qps").innerHTML = Math.floor(balanceChanges.length / (new Date().getTime() - startTime)) + " questions per second";
+  
   }setInterval(autowhatever, 0);
 
   // Creates setttings placeholder
