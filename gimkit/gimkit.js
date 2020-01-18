@@ -1,6 +1,6 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.7.16-1
+* Version: 1.7.18-1
 */
 (function(){
   console.debug("%cRunning Gimkit Hack V1.7", "color:#FF5555;font-size:20px;");
@@ -10,6 +10,8 @@
   let d = "div";
   let a3 = "#33aa33";
   let a33 = "#aa3333";
+  let startTime = new Date().getTime();
+  let balanceChanges = [];
   function gcn(x,y){return document.getElementsByClassName(x)[y]}
   function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.innerHTML=i;return x;}
   function app(v){document.body.appendChild(v)}
@@ -116,16 +118,16 @@
   // Creates Upgradeable Upgrade Display
   let autoclass = "sc-bdVaJa fkLxCm autoUp";
 
-  let automoney = cre(d,autoclass,btnattr.style+";position:absolute;margin-left: 100px;font-size:15px","Money: Level 1 for $0");
+  let automoney = cre(d,autoclass,btnattr.style+";position:absolute;margin-left: 100px;font-size:12px","Money: Level ? for $?");
   appup(automoney);
 
-  let autostreak = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:300px;font-size:15px","Streak: Level 1 for $0");
+  let autostreak = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:300px;font-size:12px","Streak: Level ? for $?");
   appup(autostreak);
 
-  let automulti = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:500px;font-size:15px","Multi: Level 1 for $0");
+  let automulti = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:500px;font-size:12px","Multi: Level ? for $?");
   appup(automulti);
 
-  let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:700px;font-size:15px","Protec: Level 1 for $0");
+  let autoprotec = cre(d,autoclass,btnattr.style+";position:absolute;margin-left:700px;font-size:12px","Protec: Level ? for $?");
   appup(autoprotec);
   
   let lvl = {
@@ -207,6 +209,23 @@
       }else {
         shrink[3].innerHTML = "MAX";
       }
+      
+      // Questions Per Second
+      let currentBal = parseInt(document.getElementsByTagName("div")[9].innerHTML.slice(1).split(",").join(""));
+      
+      if(balanceChanges.length === 0 && currentBal > 0) {
+        let bcx = document.createElement("span");
+        bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white";
+        bcx.id = "qps";
+        balanceChanges.push(currentBal);
+      }
+      
+      if(balanceChanges[balanceChanges.length - 1] < currentBal) {
+        balanceChanges.push(currentBal);
+      }
+      
+      document.getElementById("qps").innerHTML = Math.floor(balanceChanges.length / (new Date().getTime() - startTime)) + " questions per second";
+      
     }catch(err){}
   }setInterval(autowhatever, 0);
 
