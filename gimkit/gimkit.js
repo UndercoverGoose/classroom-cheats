@@ -10,8 +10,8 @@
   let d = "div";
   let a3 = "#33aa33";
   let a33 = "#aa3333";
-  let startTime = new Date().getTime();
   let balanceChanges = [];
+  let balanceTimes = [];
   function gcn(x,y){return document.getElementsByClassName(x)[y]}
   function cre(t,c,s,i){let x=document.createElement(t);x.className=c,x.style=s,x.innerHTML=i;return x;}
   function app(v){document.body.appendChild(v)}
@@ -214,10 +214,15 @@
     }catch(err){}
     
     // Questions Per Second
-    let currentBal = parseInt(document.getElementsByTagName("div")[9].innerHTML.slice(1).split(",").join(""));
+    let currentBal;
+    if(document.getElementsByTagName("div")[9].innerHTML.indexOf("$") === -1) {
+      currentBal = parseInt(document.getElementsByTagName("div")[10].innerHTML.slice(1).split(",").join(""));
+    }else {
+      currentBal = parseInt(document.getElementsByTagName("div")[9].innerHTML.slice(1).split(",").join(""));
+    }
 
     if(balanceChanges.length === 0) {
-      if(typeof document.getElementById("qps") !== null ){
+      if(document.getElementById("qps") === null ){
         let bcx = document.createElement("span");
         bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white; top: 5px;";
         bcx.id = "qps";
@@ -228,15 +233,28 @@
 
     if(balanceChanges[balanceChanges.length - 1] !== currentBal) {
       balanceChanges.push(currentBal);
+      balanceTimes.push(new Date().getTime());
+    }
+    
+    if(parseFloat(balanceChanges.length / 10).toFixed(1) >= 1) {
+      document.getElementById("qps").style.color = a33;
+    }else {
+      document.getElementById("qps").style.color = "#fff";
     }
 
-    if(new Date().getTime() - startTime >= 10000) {
-      startTime = new Date().getTime();
-      balanceChanges = [];
-      console.log("10 Seconds is Up");
+    for(let x=0;x<balanceTimes.length;x++) {
+      if(new Date().getTime() - balanceTimes[x] >= 10000) {
+        delete balanceTimes[x];
+        delete balanceChanges[x];
+        
+        console.log("Deleted " + x, balanceTimes, balanceChanges);
+        
+        balanceTimes = balanceTimes.filter((a,b) => a + b);
+        balanceChanges = balanceChanges.filter((a,b) => a + b);
+      }
     }
 
-    document.getElementById("qps").innerHTML = Math.floor(balanceChanges.length / (new Date().getTime() - startTime)) + " questions per second";
+    document.getElementById("qps").innerHTML = (balanceChanges.length / 10).toFixed(1) + " questions per second";
   
   }setInterval(autowhatever, 0);
 
