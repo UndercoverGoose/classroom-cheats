@@ -3,7 +3,7 @@
 * Version: 1.7.20-1
 */
 (function(){
-  console.debug("%cRunning Gimkit Hack V1.7", "color:#FF5555;font-size:20px;");
+  console.debug("%cRunning Gimkit Hack V1.7.20-1", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
