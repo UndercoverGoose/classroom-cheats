@@ -254,7 +254,7 @@
       }
     }
 
-    document.getElementById("qps").innerHTML = (balanceChanges.length / 10).toFixed(1) + " questions per second";
+    document.getElementById("qps").innerHTML = ((balanceChanges.length - 1) / 10).toFixed(1) + " questions per second";
   
   }setInterval(autowhatever, 0);
 
