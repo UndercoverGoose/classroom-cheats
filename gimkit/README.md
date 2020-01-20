@@ -1,4 +1,4 @@
-# Gimkit *V1.7.20-1*
+# [Gimkit](gimkit.js) *V1.7.20-1*
 
 #### It is against Gimkit's [terms of service](https://www.gimkit.com/terms-of-service#integrity-of-the-game-and-community) to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
