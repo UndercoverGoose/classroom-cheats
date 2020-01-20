@@ -1,6 +1,6 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.7.18-1
+* Version: 1.7.20-1
 */
 (function(){
   console.debug("%cRunning Gimkit Hack V1.7", "color:#FF5555;font-size:20px;");
@@ -226,6 +226,7 @@
         let bcx = document.createElement("span");
         bcx.style = "font-size: 15px;position:fixed;right: 120px;color:white; top: 5px;";
         bcx.id = "qps";
+        document.body.appendChild(document.createElement('b'));
         document.body.appendChild(bcx);
       }
       balanceChanges.push(currentBal);
