@@ -47,6 +47,9 @@
 - Shows you the next upgrade $ amount and will be colored green if you can buy the upgrade
 > **NOTE:** You'll have to open the shop to each category so it knows what level's you have
 
+#### Questions Per Second
+- Shows you how many questions you are answering every second
+
 ## Usage:
 #### Developer Console
 - Copy & Paste [gimkit.js](gimkit.js) **or** Bookmarklet *(Below)* and remove `javascript:` & `void 0`
@@ -63,6 +66,7 @@
 
 ## Upcoming Features:
 - Changing of keybinds
+- Alerting when your QPS is to high
 
 ## Features Not Worthy Enough
 - *Impossible*
