@@ -1,12 +1,13 @@
-# Gimkit *V1.7.18-1*
+# Gimkit *V1.7.20-1*
 
 #### It is against Gimkit's [terms of service](https://www.gimkit.com/terms-of-service#integrity-of-the-game-and-community) to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
-## *EXTREMELY Good News!*
+## *News!*
 - Highlight Answer, and all the others are now fully *WORKING AGAIN*! No need to get the answer wrong anymore! ***Works Just Like Before***
   
-## *Warning*
 - Gimkit has implemented new detection to protect against scripts. To make sure you do not get kicked, try not to answer too quickly, as you will get kicked for that. You will probably eventually get kicked for scripts detected, as I do not know how it detects the scripts *yet*
+
+- I was able to maintain a 1.0 QPS without getting kicked. Then I started to spam and got up to 1.5 QPS before I got kicked.
   
 ## Features:
 #### Highlight Answer
@@ -48,7 +49,8 @@
 > **NOTE:** You'll have to open the shop to each category so it knows what level's you have
 
 #### Questions Per Second
-- Shows you how many questions you are answering every second
+- Shows you how many questions you are answering every second.
+- When the text turns *red* than you are at risk of getting kicked.
 
 ## Usage:
 #### Developer Console
@@ -60,7 +62,7 @@
 
 > **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats or copy the script below
 
-- *Recommended* - (Not Live) Stable Release **Not Dangerous!** `*running v1.7.18-1*`
+- *Recommended* - (Not Live) Stable Release **Not Dangerous!** `*running v1.7.20-1*`
 
 `javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovermoose.github.io/gimkitjs/gimkit.js";document.body.appendChild(lscrpt);}());void 0`
 
