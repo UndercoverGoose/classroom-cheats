@@ -11,6 +11,13 @@
 - [1/13] Gimkit has implemented new detection to protect against scripts. To make sure you do not get kicked, try not to answer too quickly, as you will get kicked for that. You will probably eventually get kicked for scripts detected, as I do not know how it detects the scripts, yet
 ```
 
+## Detection Problems
+#### Cheating Detected
+- Client Side:
+<img src="../github/images/gimkit_cheating.png" title="Cheating Detected" alt="Cheating Detected" width="500px"/>
+- Server Side:
+<img src="../github/images/gimkit_servercheat.png" title="Cheating Detected" alt="Cheating Detected" width="500px"/>
+
 ## Features:
 #### Highlight Answer
 - Highlights the correct answer in a nice bold white color
