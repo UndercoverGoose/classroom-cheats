@@ -4,7 +4,7 @@
 
 ## *News!*
 ```diff
-- [1/25] Almost instantly, I got kicked for cheats detected while maintaining a 0.8 QPS
+- [1/25] After around a minute, I got kicked for cheats detected. All I was running was Highlight Answer, and was not answering.
 
 + [1/20] I was able to maintain a 1.0 QPS without getting kicked. Then I started to spam and got up to 1.5 QPS before I got kicked.
 
