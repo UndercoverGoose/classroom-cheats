@@ -4,6 +4,8 @@
 
 ## *News!*
 ```diff
+- [1/25] Almost instantly, I got kicked for cheats detected while maintaining a 0.8 QPS
+
 + [1/20] I was able to maintain a 1.0 QPS without getting kicked. Then I started to spam and got up to 1.5 QPS before I got kicked.
 
 + [1/13] Highlight Answer, and all the others are now fully WORKING AGAIN! No need to get the answer wrong anymore! Works Just Like Before
