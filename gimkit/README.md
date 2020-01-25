@@ -4,11 +4,15 @@
 
 ## *News!*
 ```diff
-- [1/25] After a minute or two, answering only 1 question, I got kicked for cheating.
+[1/25]
+- After a minute or two, answering only 1 question, I got kicked for cheating.
+- When running the cheats, even if not using them, you do eventually get kicked for cheating, although not...
 
-+ [1/20] I was able to maintain a 1.0 QPS without getting kicked.
+[1/20]
++ I was able to maintain a 1.0 QPS without getting kicked.
 
-+ [1/13] Highlight Answer, and all the others are now fully WORKING AGAIN!
+[1/13]
++ Highlight Answer, and all the others are now fully WORKING AGAIN!
 ```
 
 ## Detection Problems
