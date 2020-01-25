@@ -6,7 +6,7 @@
 ```diff
 [1/25]
 - When running the cheats, even if not using them, you do eventually get kicked for cheating, although not...
-@@ Getting kicked for answering too fast is not related to running cheats, which defies the point of speed
+! Getting kicked for answering too fast is not related to running cheats, which defies the point of speed
 
 [1/20]
 + I was able to maintain a 1.0 QPS without getting kicked.
