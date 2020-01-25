@@ -4,13 +4,11 @@
 
 ## *News!*
 ```diff
-- [1/25] After around a minute, I got kicked for cheats detected. All I was running was Highlight Answer, and was not answering.
+- [1/25] After a minute or two, answering only 1 question, I got kicked for cheating.
 
-+ [1/20] I was able to maintain a 1.0 QPS without getting kicked. Then I started to spam and got up to 1.5 QPS before I got kicked.
++ [1/20] I was able to maintain a 1.0 QPS without getting kicked.
 
-+ [1/13] Highlight Answer, and all the others are now fully WORKING AGAIN! No need to get the answer wrong anymore! Works Just Like Before
-  
-- [1/13] Gimkit has implemented new detection to protect against scripts. To make sure you do not get kicked, try not to answer too quickly, as you will get kicked for that. You will probably eventually get kicked for scripts detected, as I do not know how it detects the scripts, yet
++ [1/13] Highlight Answer, and all the others are now fully WORKING AGAIN!
 ```
 
 ## Detection Problems
