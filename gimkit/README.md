@@ -13,10 +13,8 @@
 
 ## Detection Problems
 #### Cheating Detected
-- Client Side:
-<img src="../github/images/gimkit_cheating.png" title="Cheating Detected" alt="Cheating Detected" width="500px"/>
-- Server Side:
-<img src="../github/images/gimkit_servercheat.png" title="Cheating Detected" alt="Cheating Detected" width="500px"/>
+- Client & Server Side:
+<img src="../github/images/gimkit_cheating.png" title="Cheating Detected" alt="Cheating Detected" width="250px"/><img src="../github/images/gimkit_servercheat.png" title="Cheating Detected" alt="Cheating Detected" width="250px"/>
 
 ## Features:
 #### Highlight Answer
