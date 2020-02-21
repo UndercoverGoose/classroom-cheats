@@ -4,15 +4,15 @@
 
 ## *News!*
 ```diff
+[2/21]
++ I have found out that when you implement jQuery into Gimkit, a request is sent to there server with your information. This is likely what is causing you to get kicked for cheats.
+
 [1/25]
 - When running the cheats, even if not using them, you do eventually get kicked for cheating, although not...
 ! Getting kicked for answering too fast is not related to running cheats, which defies the point of speed
 
 [1/20]
 + I was able to maintain a 1.0 QPS without getting kicked.
-
-[1/13]
-+ Highlight Answer, and all the others are now fully WORKING AGAIN!
 ```
 
 ## Detection Problems
