@@ -5,7 +5,8 @@
 ## *News!*
 ```diff
 [2/21]
-+ I have found out that when you implement jQuery into Gimkit, a request is sent to there server with your information. This is likely what is causing you to get kicked for cheats.
+- Sadly, you still will get kicked
++ Gimkit detects when jQuery is implemented and sends information to their servers
 
 [1/25]
 - When running the cheats, even if not using them, you do eventually get kicked for cheating, although not...
