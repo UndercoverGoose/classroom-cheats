@@ -16,11 +16,6 @@
 + I was able to maintain a 1.0 QPS without getting kicked.
 ```
 
-## Detection Problems
-#### Cheating Detected
-- Client & Server Side:
-<img src="../github/images/gimkit_cheating.png" title="Cheating Detected" alt="Cheating Detected" width="250px"/><img src="../github/images/gimkit_servercheat.png" title="Cheating Detected" alt="Cheating Detected" width="250px"/>
-
 ## Features:
 #### Highlight Answer
 - Highlights the correct answer in a nice bold white color
