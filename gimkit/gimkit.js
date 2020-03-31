@@ -1,9 +1,9 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.7.20-1
+* Version: 1.8.31-3
 */
 (function(){
-  console.debug("%cRunning Gimkit Hack V1.7.20-1", "color:#FF5555;font-size:20px;");
+  console.debug("%cRunning Gimkit Hack V1.8.31-3", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -17,32 +17,27 @@
   function app(v){document.body.appendChild(v)}
   function appd(v){document.getElementsByClassName(cN)[1].appendChild(v)}
   function apps(v){document.getElementsByClassName(cN)[7].appendChild(v)}
-  function appup(v){document.getElementsByClassName('sc-fYiAbW')[0].appendChild(v)}
+  function appup(v){document.getElementsByClassName('sc-dUjcNx cMoWkD')[0].appendChild(v)}
 
   // Applies default button color and look without having to purchase an upgrade to update the style
   let newstyle = document.createElement('style');
   newstyle.textContent='.fkLxCm {box-sizing: border-box;font-size: 17px;color: white;font-weight: bold;text-align: center;display: inline-block;user-select: none;cursor: pointer;padding: 12px 16px;background: rgb(0, 85, 255);transition: background 0.2s ease 0s;border-radius: 4px;font-family: "Product Sans", sans-serif;}';
   app(newstyle);
   
-  /* NEW METHOD  WAHOOOOOOOOOOOOOOOOOOOOOOO0OOOO */
   let qs = [],
       as = [];
-  let script = document.createElement('script');
-  script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js";
-  document.head.appendChild(script);
-  function wait() { // simplistic (not) way to run the jquery once the source loads
-    if(typeof $ !== "undefined") {
-      clearInterval(waitInt);
-      $.getJSON("https://www.gimkit.com/api/games/fetch/" + JSON[Object.keys(JSON)[0]][0].game,function(data){
-      let q = data.kit.questions;
-      for(let x=0;x<q.length;x++) {
-        qs.push(q[x].text);
-        as.push(q[x].answers[0].text);
+  let r = new XMLHttpRequest();
+  r.open('GET', `https://www.gimkit.com/api/games/fetch/${JSON[Object.keys(JSON)[0]][0].game}`);
+  r.onreadystatechange = function() { 
+    if (r.readyState == 4 && r.status == 200) {
+      let json = JSON.parse(r.responseText);
+      for(let x=0;x<(json.kit.questions).length;x++) {
+        qs.push(json.kit.questions[x].text);
+        as.push(json.kit.questions[x].answers[0].text);
       }
-      });
     }
   }
-  let waitInt = setInterval(wait, 100);
+  r.send();
   
   
   // Cheat toggles and "Menu" button creation
@@ -213,7 +208,7 @@
       
     }catch(err){}
     
-    // Questions Per Second
+    /*/ Questions Per Second
     let currentBal;
     if(document.getElementsByTagName("div")[9].innerHTML.indexOf("$") === -1) {
       currentBal = parseInt(document.getElementsByTagName("div")[10].innerHTML.slice(1).split(",").join(""));
@@ -247,15 +242,13 @@
       if(new Date().getTime() - balanceTimes[x] >= 10000) {
         delete balanceTimes[x];
         delete balanceChanges[x];
-        
-        console.log("Deleted " + x, balanceTimes, balanceChanges);
-        
+               
         balanceTimes = balanceTimes.filter((a,b) => a + b);
         balanceChanges = balanceChanges.filter((a,b) => a + b);
       }
     }
 
-    document.getElementById("qps").innerHTML = ((balanceChanges.length - 1) / 10).toFixed(1) + " questions per second";
+    document.getElementById("qps").innerHTML = ((balanceChanges.length - 1) / 10).toFixed(1) + " questions per second";*/
   
   }setInterval(autowhatever, 0);
 
