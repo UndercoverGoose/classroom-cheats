@@ -1,9 +1,13 @@
-# [Gimkit](gimkit.js) *V1.7.20-1*
+# [Gimkit](gimkit.js) *V1.8.31-1*
 
 #### It is against Gimkit's [terms of service](https://www.gimkit.com/terms-of-service#integrity-of-the-game-and-community) to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
 ## *News!*
 ```diff
+[3/31]
++ Hacks work again! Switched to XMLHttpRequest to get answers.
+- Themes are broken ._.
+
 [2/21]
 - Sadly, you still will get kicked
 + Gimkit detects when jQuery is implemented and sends information to their servers
@@ -11,9 +15,6 @@
 [1/25]
 - When running the cheats, even if not using them, you do eventually get kicked for cheating, although not...
 ! Getting kicked for answering too fast is not related to running cheats, which defies the point of speed
-
-[1/20]
-+ I was able to maintain a 1.0 QPS without getting kicked.
 ```
 
 ## Features:
@@ -66,15 +67,15 @@
 - *Lastest* - Copy & Paste the script below into a bookmark:
 
 ```javascript
-javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovergoose.github.io/quizlet/gimkit/gimkit.js";document.body.appendChild(lscrpt);}());void 0
+javascript:(function(){let l=document.createElement("script");l.src="https://undercovergoose.github.io/quizlet/gimkit/gimkit.js";document.body.appendChild(l);}());void 0
 ```
 
 > **NOTE:** My site happens to be *"Dangerous"* so you'll have to click *"Visit this unsafe site"* to run the cheats or copy the script below
 
-- *Recommended* - (Not Live) Stable Release **Not Dangerous!** `*running v1.7.20-1*`
+- *Recommended* - (Not Live) Stable Release **Not Dangerous!** `*running v1.8.31-1*`
 
 ```javascript
-javascript:(function(){let lscrpt=document.createElement("script");lscrpt.src="https://undercovermoose.github.io/gimkitjs/gimkit.js";document.body.appendChild(lscrpt);}());void 0
+javascript:(function(){let l=document.createElement("script");l.src="https://undercovermoose.github.io/gimkitjs/gimkit.js";document.body.appendChild(l);}());void 0
 ```
 
 ## Upcoming Features:
