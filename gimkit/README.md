@@ -4,6 +4,9 @@
 
 ## *News!*
 ```diff
+[4/1]
+- Not only are themes broken, but images within questions breaks auto answer
+
 [3/31]
 + Hacks work again! Switched to XMLHttpRequest to get answers.
 - Themes are broken ._.
@@ -11,10 +14,6 @@
 [2/21]
 - Sadly, you still will get kicked
 + Gimkit detects when jQuery is implemented and sends information to their servers
-
-[1/25]
-- When running the cheats, even if not using them, you do eventually get kicked for cheating, although not...
-! Getting kicked for answering too fast is not related to running cheats, which defies the point of speed
 ```
 
 ## Features:
