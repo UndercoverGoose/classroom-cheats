@@ -1,5 +1,6 @@
 /* Made By UndercoverGoose V1-Beta */
 
+let autoclick = false;
 if(location.href.indexOf("flashcards") !== -1) {
   (function(){ //Grabs quizizz answers (requires flashcards)
     answers=[];
@@ -53,6 +54,9 @@ if(location.href.indexOf("flashcards") !== -1) {
           let choice=mat(document.getElementsByClassName("resizeable")[x].textContent);
           if(choice===answers[questions.indexOf(grabbed)]){
             document.getElementsByClassName("option")[x-1].childNodes[0].childNodes[0].style.background="black";
+            if(autoclick) {
+              document.getElementsByClassName("option")[x-1].childNodes[0].childNodes[0].click();
+            }
           }
         }
       }
@@ -61,6 +65,8 @@ if(location.href.indexOf("flashcards") !== -1) {
     setInterval(foreva,0);
   })();
 }
-
+window.onkeypress = function(e) {
+  autoclick = (e.key === "a");
+}
 
 
