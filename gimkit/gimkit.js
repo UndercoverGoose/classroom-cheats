@@ -1,9 +1,9 @@
 /*
 * Made by: UndercoverGoose
-* Version: 1.8.31-3
+* Version: 1.9
 */
 (function(){
-  console.debug("%cRunning Gimkit Hack V1.8.31-3", "color:#FF5555;font-size:20px;");
+  console.debug("%cRunning Gimkit Hack V1.9", "color:#FF5555;font-size:20px;");
   
   // Function/Variables to simplify the creation, appending, and getting of objects/elements
   let cN = "hckcntnt";
@@ -26,8 +26,14 @@
   
   let qs = [],
       as = [];
+  let list = [];
+  for(let x=0;x<JSON[Object.keys(JSON)[0]].length;x++) {
+    list.push(parseInt(JSON[Object.keys(JSON)[0]][x]["_id"].slice(19,99),16))
+  }
+  list.sort()
+  let gameID = (JSON[Object.keys(JSON)[0]][0]["_id"].slice(0, 19) + (list[0] - 1).toString(16));
   let r = new XMLHttpRequest();
-  r.open('GET', `https://www.gimkit.com/api/games/fetch/${JSON[Object.keys(JSON)[0]][0].game}`);
+  r.open('GET', `https://www.gimkit.com/api/games/fetch/${gameID}`);
   r.onreadystatechange = function() { 
     if (r.readyState == 4 && r.status == 200) {
       let json = JSON.parse(r.responseText);
