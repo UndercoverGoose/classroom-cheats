@@ -5,7 +5,7 @@
 ## *News!*
 ```diff
 [5/14]
-+ Created [data.md](data.md) to share my progress into breaking the kit ID
++ Created data.md to share my progress into breaking the kit ID
 
 [4/1]
 - Not only are themes broken, but images within questions breaks auto answer
@@ -14,6 +14,8 @@
 + Hacks work again! Switched to XMLHttpRequest to get answers.
 - Themes are broken ._.
 ```
+
+#### [Progress into breaking the kit ID](data.md)
 
 ## Features:
 #### Highlight Answer
