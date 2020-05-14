@@ -63,7 +63,7 @@
 - ~~When the text turns *red* than you are at risk of getting kicked.~~
 
 ## Usage:
-#### Developer Console
+#### Developer Console _or_ Inspect Element
 - Copy & Paste [gimkit.js](gimkit.js) **or** Bookmarklet *(Below)* and remove `javascript:` & `void 0`
 #### Bookmarklet (AUTO-UPDATING)
 - *Lastest* - Copy & Paste the script below into a bookmark:
