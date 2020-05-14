@@ -6,6 +6,7 @@
 ```diff
 [5/14]
 + Created data.md to share my progress into breaking the kit ID
++ Added a temporary "semi fix" to the problem that MAY work on the kit
 
 [4/1]
 - Not only are themes broken, but images within questions breaks auto answer
