@@ -27,8 +27,9 @@
 #### Input Answers
 - Simply inputs the correct answer into those type questions that are annoying
 > **NOTE:** Requires an update to the box (space, then enter)
+
 #### Bigger Answer
-- Makes the selection box of the correct answer the entire screen
+- Makes the selection box of the correct answer the entire screen making it so you can click almost anywhere to get the answer correct
 
 <img src="../github/images/biganswer.png" title="Big Answer" alt="Big Answer" width="500px"/>
 
@@ -59,7 +60,7 @@
 
 #### Questions Per Second
 - Shows you how many questions you are answering every second.
-- When the text turns *red* than you are at risk of getting kicked.
+- ~~When the text turns *red* than you are at risk of getting kicked.~~
 
 ## Usage:
 #### Developer Console
@@ -80,13 +81,13 @@ javascript:(function(){let l=document.createElement("script");l.src="https://und
 ```
 
 ## Upcoming Features:
-- Changing of keybinds
-- Alerting when your QPS is to high
+- Changing of keybinds _[delayed]_
+- ~~Alerting when your QPS is to high~~
 
 ## Features Not Worthy Enough
 - *Impossible*
-  - Stealing the session of a player currently in the GimKit
-  - Purchasing Upgrades without visiting the shop
+  - Stealing the session of a player currently in the GimKit _(as in playing, answers questions etc.)_
+  - ~~Purchasing Upgrades without visiting the shop~~
 - *Denied*
   - None
 
