@@ -1,19 +1,18 @@
-# [Gimkit](gimkit.js) *V1.8.31-1*
+# [Gimkit](gimkit.js) *V1.9*
 
 #### It is against Gimkit's [terms of service](https://www.gimkit.com/terms-of-service#integrity-of-the-game-and-community) to cheat/hack in gimkit matches. Doing so can lead to account termination. *Do At Your Own Risk*
 
 ## *News!*
 ```diff
+[5/14]
++ Created [data.md](data.md) to share my progress into breaking the kit ID
+
 [4/1]
 - Not only are themes broken, but images within questions breaks auto answer
 
 [3/31]
 + Hacks work again! Switched to XMLHttpRequest to get answers.
 - Themes are broken ._.
-
-[2/21]
-- Sadly, you still will get kicked
-+ Gimkit detects when jQuery is implemented and sends information to their servers
 ```
 
 ## Features:
