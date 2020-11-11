@@ -2,7 +2,6 @@ let url = location.href.split("/");
 let gameCode = url[url.length - 1];
 let terms = [];
 let definitions = [];
-console.log(gameCode);
 
 function parseQuestions() {
   let q = questions.termIdToTermsMap;
@@ -15,18 +14,29 @@ function parseQuestions() {
   }
   setInterval(getCorrect, 0);
 }
-function getCorrect() {
-  let currentQ = document.getElementsByClassName("FormattedText notranslate TermText StudentPrompt-promptText lang-en")[0].children[0].textContent;
-  let questions = document.getElementsByClassName("StudentTermGroup-terms")[0].children;
+function getCorrect() { // Classes changed on me, so...
+  //let currentQ = document.getElementsByClassName("FormattedText notranslate TermText StudentPrompt-promptText lang-en")[0].children[0].textContent;
+  let currentQ =document.getElementsByClassName("FormattedText notranslate NewStudentPrompt-text lang-et")[0].children[0].textContent;
+  //let questions = document.getElementsByClassName("StudentTermGroup-terms")[0].children;
+  let questions = document.getElementsByClassName("NewStudentAnswerOptions")[0].children;
   let txt = [];
   for(let x=0;x<questions.length;x++) {
     txt.push(questions[x].children[0].children[0].children[0].textContent);
   }
+  flipped = false;
+  if(terms.indexOf(currentQ) === -1) {
+    termsQ = terms
+    terms = definitions
+    definitions = termsQ
+  }
   int = txt.indexOf(definitions[terms.indexOf(currentQ)]);
   for(let x=0;x<questions.length;x++) {
-    questions[x].children[0].style.background = null;
+    questions[x].children[0].style.color = null;
   }
-  questions[int].children[0].style.background = "dodgerblue";
+  try {
+    questions[int].children[0].style.color = "dodgerblue";
+    questions[int].children[0].click();
+  }catch(err){}
 }
 
 fetch(`https://quizlet.com/webapi/3.2/game-instances?filters={"gameCode":${gameCode},"isInProgress":true,"isDeleted":false}&perPage=500`)
