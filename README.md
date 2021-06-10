@@ -1,20 +1,14 @@
-# [Quizlet Cheats](quizlet/README.md)
+# Classroom Cheats
+This repository provides open-sourced scripts that can be used to cheat in popular online review/assessment tools like Kahoot, Quizlet, Gimkit, and Blooket.
 
-# [Gimkit Cheats](gimkit/README.md)
+<br><br>
+### [Quizlet Cheats](quizlet/README.md) - [Gimkit Cheats](gimkit/README.md) - [Quizizz Cheats](quizizz/README.md)
 
-# [Quizizz Cheats](quizizz/README.md)
 
-<span name="TAGS: gimkit gimkit cheat gimkit hack gimkit advantage gimkit cheats gimkit hacks gimkit hck gimkit hcks hack gimkit hck gimkit hacks for gimkit quizlet quizlet cheat quizlet hack quizlet advantage quizlet cheats quizlet hacks quizlet hck quizlet hcks hack quizlet hck quizlet hacks for quizlet quizizz hacks quizizz auto answer quizizz cheat quizziz" title="(?) Help">Click an option above to visit the cheats!</span>
+#### These scripts and tool are made for educational purposes only and I am not liable for anything caused by or with the usage of these scripts. [Use at your own risk!](README.md)
 
-## I am not responsible for anything causes by these scripts
+<br><br>
+## License
 ### MIT Licensed
-- Premission(s):
-    - Commercial use
-    - Modification
-    - Distribution
-    - Private use
-- Limitation(s):
-    - Liability
-    - Warranty
-- Condition(s):
-    -  License and copyright notice
+> Under the MIT license you have full consent to utilize, modify, and distribute the scripts present in this repo.<br>
+> However, I am not liable for any harm caused by these, or any modified versions of the scripts. And it is not guaranteed that the scripts will work at all times.<br>
