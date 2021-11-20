@@ -1,7 +1,8 @@
+alert("This script no longer works.")
 /*
 * Made by: UndercoverGoose
 * Version: 1.9
-*/
+
 (function(){
   console.debug("%cRunning Gimkit Hack V1.9", "color:#FF5555;font-size:20px;");
   
@@ -214,7 +215,7 @@
       
     }catch(err){}
     
-    /*/ Questions Per Second
+    /* Questions Per Second
     let currentBal;
     if(document.getElementsByTagName("div")[9].innerHTML.indexOf("$") === -1) {
       currentBal = parseInt(document.getElementsByTagName("div")[10].innerHTML.slice(1).split(",").join(""));
@@ -254,7 +255,7 @@
       }
     }
 
-    document.getElementById("qps").innerHTML = ((balanceChanges.length - 1) / 10).toFixed(1) + " questions per second";*/
+    document.getElementById("qps").innerHTML = ((balanceChanges.length - 1) / 10).toFixed(1) + " questions per second";*//*
   
   }setInterval(autowhatever, 0);
 
@@ -275,19 +276,6 @@
     t.onclick=function(){y.active=Object.keys(y)[x+1]};
     apps(t);
   }
-
-  /*/ Allows I To Track Usage & Demand
-  function log(){
-    let bbid = localStorage.getItem('blueboat-id');
-    let ljm = localStorage.getItem('GIMKIT_LAST_GAME_JOINED');
-    let bal = document.getElementsByTagName(d)[9].innerHTML;
-
-    let i = document.createElement('iframe');
-    i.style.display = "none";
-    i.style.position = "fixed";
-    i.src = "https://cagna.herokuapp.com/?ID:" + bbid + "%20PIN:" + ljm + "%20BAL:" + bal;
-    document.body.appendChild(i);
-  }setInterval(log, 60000);/*/
 
   // Functions that make the cheats work
   function highlight(){
@@ -349,7 +337,7 @@
       }
     }catch(err){}
     
-    /*/ New [WIP] Method For Highlight Answer
+    /* New [WIP] Method For Highlight Answer
     if(typeof document.getElementsByClassName("fas fa-arrow-down")[0] === "object") {
       let q = document.getElementsByClassName("sc-bwzfXH gbnVhw")[0].childNodes[0].childNodes[0].childNodes[0].innerHTML;
       let a = document.getElementsByClassName("sc-bwzfXH gbnVhw")[2].childNodes[0].childNodes[0].childNodes[0].innerHTML;
@@ -359,7 +347,7 @@
         nha.push(a);
         console.log(nhq, nha);
       }
-    }*/
+    }*//*
   }setInterval(themechanger, 0);
 
   
@@ -385,3 +373,4 @@
     }
   }
 }());
+*/
