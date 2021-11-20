@@ -7,8 +7,5 @@
 
 ## Usage:
 #### Bookmarklet
-- Copy & Paste the scripts into a bookmark
-
-## Upcoming Features:
-#### Quizlet Live Answers
-- Shows you the correct answer for a quizlet live game
+- Copy & Paste the scripts into a bookmark/console
+- - If making a bookmark, make sure the script contains a `javascript:` at the beginning
