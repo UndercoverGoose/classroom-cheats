@@ -1,5 +1,5 @@
 let url = location.href.split("/");
-let gameCode = url[url.length - 1];
+let gameCode = prompt("Enter game code: Ex: 666666", "");
 let terms = [];
 let definitions = [];
 
@@ -16,12 +16,12 @@ function parseQuestions() {
 }
 function getCorrect() { // Classes changed on me, so...
   //let currentQ = document.getElementsByClassName("FormattedText notranslate TermText StudentPrompt-promptText lang-en")[0].children[0].textContent;
-  let currentQ =document.getElementsByClassName("FormattedText notranslate NewStudentPrompt-text lang-et")[0].children[0].textContent;
+  let currentQ = document.getElementsByClassName("FormattedText notranslate StudentPrompt-text lang-en")[0].children[0].innerHTML.split('<br>').join('\n');
   //let questions = document.getElementsByClassName("StudentTermGroup-terms")[0].children;
-  let questions = document.getElementsByClassName("NewStudentAnswerOptions")[0].children;
+  let questions = document.getElementsByClassName("StudentAnswerOption has-text");
   let txt = [];
   for(let x=0;x<questions.length;x++) {
-    txt.push(questions[x].children[0].children[0].children[0].textContent);
+    txt.push(questions[x].children[0].children[0].children[0].children[0].innerHTML.split('<br>').join('\n'));
   }
   flipped = false;
   if(terms.indexOf(currentQ) === -1) {
@@ -31,11 +31,11 @@ function getCorrect() { // Classes changed on me, so...
   }
   int = txt.indexOf(definitions[terms.indexOf(currentQ)]);
   for(let x=0;x<questions.length;x++) {
-    questions[x].children[0].style.color = null;
+    questions[x].children[0].children[0].children[0].style.fontWeight = null;
   }
   try {
-    questions[int].children[0].style.color = "dodgerblue";
-    questions[int].children[0].click();
+    questions[int].children[0].children[0].children[0].style.fontWeight = "bolder";
+    //questions[int].children[0].click();
   }catch(err){}
 }
 
