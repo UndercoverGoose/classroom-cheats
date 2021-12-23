@@ -4,6 +4,7 @@ This repository provides open-sourced utilities that can be used to get the answ
 <br><br>
 ### [Quizlet](quizlet/README.md) + [Gimkit](gimkit/README.md) + [Quizizz](quizizz/README.md)
 
+Quizlet Live Auto Answer -> https://github.com/glixzzy/quizlet-hack
 
 ## Status
 <img src="https://img.shields.io/badge/Gimkit%20Script-Patched-critical" height=30>
