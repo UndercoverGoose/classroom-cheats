@@ -17,6 +17,16 @@ Key
 > Not Working
 ```
 
+## Usage
+- You can find all the scripts in the [`/scripts/`](/scripts/) folder
+- Just copy and paste into console to run
+
+### Bookmarklet
+- **See [bookmarklets.md](bookmarklets.md)**
+> Note that these may not always be up-to-date
+
+<br><br>
+
 #### These scripts and tool are made for educational purposes only and I am not liable for anything caused by or with the usage of these scripts. [Use at your own risk!](README.md)
 
 ## MIT Licensed
