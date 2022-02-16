@@ -10,7 +10,7 @@ Quizlet Live Auto Answer -> https://github.com/glixzzy/quizlet-hack
 <img src="https://img.shields.io/badge/Gimkit%20Script-Patched-critical" height=30>
 <img src="https://img.shields.io/badge/Quizlet%20Live%20Answers-Working-success" height=30>
 <img src="https://img.shields.io/badge/Quizlet%20Micromatch%20Answers-Working-success" height=30>
-<img src="https://img.shields.io/badge/Quizlet%20Gravity%20Answers-Unknown-important" height=30>
+<img src="https://img.shields.io/badge/Quizlet%20Gravity%20Answers-Working-success" height=30>
 <img src="https://img.shields.io/badge/Quizizz%20Answers-Unknown-important" height=30>
 
 
