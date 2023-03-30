@@ -1,64 +1,49 @@
-(async function () {
-  const pin = prompt("Enter PIN, like: 123-456", "").match(/[0-9]/g).join("");
-  if (pin.length !== 6) {
-    alert("Invalid Pin, try again");
-    return;
+try {
+  async function getSetId(pin) {
+    const res = await fetch(`https://quizlet.com/webapi/3.8/multiplayer/game-instance?gameCode=${pin}`);
+    const json = await res.json();
+    if(json.error) throw new Error(json.error.message);
+    return json.gameInstance.itemId;
   }
-  let gameId = await fetch(
-    `https://quizlet.com/webapi/3.2/game-instances?filters={"gameCode":${pin},"isInProgress":true,"isDeleted":false}&perPage=500`
-  );
-  gameId = await gameId.json();
-  const set = gameId.responses[0].models.gameInstance[0]?.itemId;
-  if (!set) {
-    alert("Set not found, make sure the pin is correct and try again");
-    return;
+  async function getSetData(setId) {
+    const res = await fetch(`https://quizlet.com/${setId}`);
+    const text = await res.text();
+    const data = text.match(/\\"termIdToTermsMap\\":{.+?{.+?\\"termSort\\":/gi)?.[0];
+    if(!data) throw new Error("Failed to parse set data.");
+    const parsed = JSON.parse(data.slice(21, -14).replaceAll(`\\"`,`"`));
+    return [Object.fromEntries(Object.values(parsed).map(({word, definition}) => [word, definition])), Object.fromEntries(Object.values(parsed).map(({word, definition}) => [definition, word]))];
   }
-  let setPage = await fetch(`https://quizlet.com/${set}`);
-  setPage = await setPage.text();
-
-  try {
-    eval(
-      setPage.slice(
-        setPage.indexOf('(function(){window.Quizlet["setPageData"]'),
-        setPage.indexOf("setPageData") +
-          setPage.slice(setPage.indexOf("setPageData")).indexOf("</script>")
-      )
-    );
-  } catch {}
-
-  const mapping = Quizlet.setPageData?.termIdToTermsMap;
-  if (!mapping) {
-    alert("Set data didn't load properly, try again");
-    return;
-  }
-  let terms = {};
-  let definitions = {};
-  for (const item of Object.values(mapping)) {
-    terms[item.word] = item.definition;
-    definitions[item.definition] = item.word;
-  }
-
-  setInterval(function () {
+  function getActiveQuestion() {
     try {
-      const question = document.getElementsByClassName(
-        "FormattedText notranslate StudentPrompt-text lang-en"
-      )[0].textContent;
-      const answers = Array.from(
-        document.getElementsByClassName(
-          "FormattedText notranslate StudentAnswerOption-text lang-en"
-        )
-      );
-      if (question in terms) {
-        answers.forEach((box) => {
-          if (box.textContent === terms[question])
-            box.style.fontWeight = "bolder";
+      const question = document.querySelector(".StudentPrompt-text").textContent;
+      const answers = Array.from(document.querySelectorAll(".StudentAnswerOption-text"));
+      return [question, answers];
+    }catch {}
+    return [null, null];
+  }
+  (async() => {
+    const pin = prompt("Enter PIN, like: XXX-XXX", "").match(/[0-9a-zA-Z]/g).join("");
+    if(pin.length !== 6) throw new Error("Pin must be 6 characters in length.");
+    const setId = await getSetId(pin);
+    const [term2Def, def2Term] = await getSetData(setId);
+    setInterval(async function() {
+      const [question, choices] = getActiveQuestion();
+      if(!question || !choices) return;
+      if(question in term2Def) {
+        choices.forEach((choice) => {
+          if(choice.textContent === term2Def[question]) choice.style.fontWeight = "bolder";
         });
-      } else if (question in definitions) {
-        answers.forEach((box) => {
-          if (box.textContent === definitions[question])
-            box.style.fontWeight = "bolder";
+      }else if(question in def2Term) {
+        choices.forEach((choice) => {
+          if(choice.textContent === def2Term[question]) choice.style.fontWeight = "bolder";
+        });
+      }else {
+        choices.forEach((choice) => {
+          choice.style.fontWeight = "normal";
         });
       }
-    } catch {}
-  }, 100);
-})();
+    }, 0);
+  })();
+}catch(err) {
+  alert(err);
+}
