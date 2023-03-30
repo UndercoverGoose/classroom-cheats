@@ -10,9 +10,7 @@
       reversed[matches[term]] = term;
     }
     setInterval(function () {
-      const asteroids = Array.from(
-        document.getElementsByClassName("TermText notranslate lang-sv")
-      );
+      const asteroids = Array.from(document.querySelectorAll(".TermText"));
       if (asteroids.length === 0) return;
 
       asteroids.forEach((asteroid) => {
