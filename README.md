@@ -10,7 +10,7 @@ Quizlet
 + (Micro)Match Answers
 + Gravity Answers
 
-Gimkit - https://undercovergoose.github.io/gimkit
+Gimkit - https://github.com/UndercoverGoose/gimkit
 ```
 
 ## Usage
