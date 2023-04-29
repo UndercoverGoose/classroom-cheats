@@ -1,16 +1,12 @@
 # Classroom Cheats
 This repository provides open-sourced utilities that can be used to get the answers in popular online review/assessment tools like Kahoot, Quizlet, Gimkit, and Blooket.
 
-### Gimkit Utility -> https://undercovergoose.github.io/gimkit
-
 ## Status
 ```diff
 Quizlet
 + Live Answers
 + (Micro)Match Answers
 + Gravity Answers
-
-Gimkit - https://github.com/UndercoverGoose/gimkit
 ```
 
 ## Usage
